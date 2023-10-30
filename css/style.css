@@ -47,3 +47,11 @@ body {
   display: block;
   text-align: center;
 }
+
+.big-nav-icon {
+  font-size: 40px;
+}
+
+.small-nav-label {
+  font-size: 12px;
+}
