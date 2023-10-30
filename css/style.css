@@ -2,9 +2,7 @@ body {
   font-family: sans-serif;
 }
 
-html,
 .fullscreen {
-  display: flex;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -18,4 +16,34 @@ html,
 
 .title {
   font-size: 3rem;
+  padding: 25%;
+}
+
+.floatingTab {
+  padding: 0;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+.nav-link {
+  color: #000;
+  text-align: center;
+}
+
+.nav-link * {
+  display: block;
+}
+
+.tab-content .tab-pane {
+  height: calc(100vh - 100px);
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  display: block;
+  text-align: center;
 }
