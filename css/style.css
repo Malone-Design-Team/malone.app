@@ -49,9 +49,10 @@ body {
 }
 
 .big-nav-icon {
-  font-size: 40px;
+  font-size: 28px;
 }
 
 .small-nav-label {
   font-size: 12px;
+  padding-top: 1px;
 }
