@@ -6,7 +6,7 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="images/malone-icon-152.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="white"/>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Malone">
@@ -16,365 +16,156 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
+
+  <script type="text/javascript">
+    fetch('./markdown/home.md')
+       .then(response => {
+         if (!response.ok) {
+            throw new Error("HTTP error " + response.status);
+         }
+         console.log(response.text);
+         return response.text();
+       })
+       .then(markdown => {
+          var html = marked.parse(markdown);
+          document.getElementById('home-content').innerHTML = html;
+       })
+       .catch(error => {
+          console.log(error);
+       });
+ </script>
+ <script type="text/javascript">
+   document.addEventListener('DOMContentLoaded', (event) => {
+     const faqFiles = [
+       './markdown/faqs/short-example.md',
+       './markdown/faqs/long-example.md',
+       `./markdown/faqs/partner-tired.md`,
+       `./markdown/faqs/sky-blue.md`,
+       `./markdown/faqs/maya-hee.md`
+     ];
+     const faqContainer = document.querySelector('.faq-cards');
+
+     faqFiles.forEach(file => {
+       fetch(file)
+         .then(response => {
+           if (!response.ok) {
+             throw new Error("HTTP error " + response.status);
+           }
+           return response.text();
+         })
+         .then(markdown => {
+           const html = marked.parse(markdown);
+           const doc = new DOMParser().parseFromString(html, "text/html")
+           const card = document.createElement('div');
+           const question = doc.getElementsByTagName('h3')[0].innerText;
+           const answer = doc.getElementsByTagName('p')[0].innerText;
+           console.log(question);
+           console.log(answer);
+           card.className = 'card mt-2 mb-2';
+           card.innerHTML = `	<div class="card-header">
+     								<h5 class="text-start p-1">${question}</h5>
+           						</div>
+           						<div class="card-body">
+           							<p class="card-text text-end">${answer}</p>
+             					</div>`;
+           faqContainer.appendChild(card);
+         })
+         .catch(error => {
+           console.error('Error loading FAQ:', error);
+         });
+     });
+   });
+ </script>
+ <script type="text/javascript">
+   document.addEventListener('DOMContentLoaded', (event) => {
+     const resourceFiles = [
+       './markdown/resources/jane-doe-obgyn.md',
+       `./markdown/resources/adira-orehlian-social-worker.md`
+     ];
+     const resourcesContainer = document.querySelector('.resource-cards');
+
+     resourceFiles.forEach(file => {
+       fetch(file)
+         .then(response => {
+           if (!response.ok) {
+             throw new Error("HTTP error " + response.status);
+           }
+           return response.text();
+         })
+         .then(markdown => {
+           const html = marked.parse(markdown);
+           const doc = new DOMParser().parseFromString(html, "text/html")
+           const card = document.createElement('div');
+           const title = doc.getElementsByTagName('h1')[0]?.innerText || 'No Title';
+           const detailsElements = doc.getElementsByTagName('p');
+           const imageElement = doc.getElementsByTagName('img')[0];
+           let detailsHTML = '';
+           for (let detail of detailsElements) {
+               detailsHTML += `<p class="card-text p-0 m-0">${detail.innerText}</p>`;
+           }
+           card.className = 'card d-flex flex-row align-items-center mt-2 mb-2';
+           card.style.maxWidth = '100%';
+           card.style.boxSizing = 'border-box';
+           card.innerHTML = `
+             <div style="flex-grow: 1; min-width: 0;">
+               <div class="card-body">
+                 <h3 class="card-title">${title}</h3>
+                 ${detailsHTML}
+               </div>
+             </div>
+             ${imageElement ? `<img src="${imageElement.src}" style="width: 128px; height: auto; object-fit: cover;" class="ml-3" alt="...">` : ''}
+           `;
+
+           resourcesContainer.appendChild(card);
+         })
+         .catch(error => {
+           console.error('Error loading resources:', error);
+         });
+     });
+   });
+ </script>
 </head>
 <body class="fullscreen">
   <div class="tab-content">
     <div class="container tab-pane active" id="home" role="tabpanel">
-      <div class="jumbotron">
-        <h1 class="display-1">Malone</h1>
-        <p class="lead">Malone is more than a community center. Malone programs and initiatives extend beyond the community center in support of our mission to end multigenerational poverty.</p>
-        <p>See below for a week-by-week breakdown.</p>
-        <p class="lead">
-          <a class="btn btn-primary btn-lg" href="#" role="button">Scroll to my week</a>
-        </p>
+      <div id="home-content">
       </div>
-      <hr class="my-5">
-      <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 1</h5>
-            <p class="card-text"> This is the week of your last menstrual period, perhaps before you know you're pregnant. Your body is preparing for ovulation.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 2</h5>
-            <p class="card-text"> Conception typically takes place around this time, when your ovary releases an egg that is fertilized by sperm.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 3</h5>
-            <p class="card-text"> The fertilized egg forms a cluster of cells which move towards the uterus. Your hormone levels are changing, which may lead to mood swings.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 4</h5>
-            <p class="card-text"> The blastocyst implants in the uterine lining, where it will develop into the baby and placenta. You might notice fatigue and slight bleeding.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 5</h5>
-            <p class="card-text"> Your baby is tiny, but its heart, brain, and spinal cord are starting to form. You may experience morning sickness or mood swings.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 6</h5>
-            <p class="card-text"> Your baby’s facial features are developing. Hormone levels spike, resulting in nausea and heightened emotions.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 7</h5>
-            <p class="card-text"> The baby’s arms and legs begin to bud. You might feel slightly more tired and nauseous than usual.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 8</h5>
-            <p class="card-text"> Your baby is now an embryo with a heartbeat. Breast changes and backache can be discomforting.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 9</h5>
-            <p class="card-text"> Your baby’s most critical development period ends this week. You might notice weight gain and mood swings.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 10</h5>
-            <p class="card-text"> Fingers and toes are forming. You may notice changed food preferences or aversions.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 11</h5>
-            <p class="card-text"> Your baby’s genitalia are developing. Some symptoms may ease, leaving you feeling more energetic.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 12</h5>
-            <p class="card-text"> Your baby will start to move, but you won’t feel it yet. You may notice your waist thickening.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 13</h5>
-            <p class="card-text"> Your baby can make fists and facial expressions. Hormone levels are evening out, causing mood swings to decrease.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 14</h5>
-            <p class="card-text"> The baby’s features are becoming distinctly human. You might feel more energetic now.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 15</h5>
-            <p class="card-text"> You might be able to find out the sex of your baby during an ultrasound this week. Weight gain continues and you may start to "show."</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 16</h5>
-            <p class="card-text"> Your baby now has reflexes. You might start to feel your baby move, and pregnancy "glow" is on full display.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 17</h5>
-            <p class="card-text"> Your baby can hear your voice. Your nipples might darken as your blood volume increases.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 18</h5>
-            <p class="card-text"> Your baby is developing fingerprints and toe prints. You will start to feel the baby move more noticeably.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 19</h5>
-            <p class="card-text"> Your baby may have hair on its head now. You may experience occasional abdominal aches.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 20</h5>
-            <p class="card-text"> The baby might begin to recognize your voice. The halfway point may bring excitement or anxiety.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 21</h5>
-            <p class="card-text"> Your baby's movements become more coordinated. Indigestion and heartburn may bother you.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 22</h5>
-            <p class="card-text"> The baby’s sight is developing. You may observe stretch marks.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 23</h5>
-            <p class="card-text"> Your baby is gaining weight. You may notice swelling in your ankles and feet.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 24</h5>
-            <p class="card-text"> The baby’s brain is growing rapidly. You may experience backaches and increased sex drive.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 25</h5>
-            <p class="card-text"> The baby’s wrinkles are filling out as fat forms. Trouble sleeping may be an issue due to your growing abdomen.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 26</h5>
-            <p class="card-text"> The baby’s lungs are developing. You may find yourself noticing your baby’s movements more frequently.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 27</h5>
-            <p class="card-text"> Your baby can open and close its eyes now. You might feel physically uncomfortable due to hormones and growth.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 28</h5>
-            <p class="card-text"> Your baby is moving frequently. Feeling the baby’s positions may become a new pastime.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 29</h5>
-            <p class="card-text"> Your baby's senses are developed. Mild swelling of feet and ankles might persist.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 30</h5>
-            <p class="card-text"> The baby is gaining more weight. You may experience shortness of breath and difficulty finding a comfortable sleeping position.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 31</h5>
-            <p class="card-text"> The baby may be moving a lot. Your breasts may be leaking colostrum, the precursor to breast milk.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 32</h5>
-            <p class="card-text"> Your baby has periods of sleep and wakefulness. Mood swings may return due to hormonal changes.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 33</h5>
-            <p class="card-text"> Your baby might be showing behaviors like sucking its thumb. You may experience indigestions and heartburn.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 34</h5>
-            <p class="card-text"> The baby’s immune system is developing. You may feel Braxton Hicks contractions more frequently.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 35</h5>
-            <p class="card-text"> The baby’s kidneys are fully developed. You may notice change in baby’s movements as it prepares for birth.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 36</h5>
-            <p class="card-text"> The baby is getting ready to face the world. You may start feeling pressure in the pelvis as your body prepares for labor.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 37</h5>
-            <p class="card-text"> Your baby’s organs are ready to function on their own. You may feel contractions intensifying.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 38</h5>
-            <p class="card-text"> The baby continues to build fat layers. You may feel more frequent urges to urinate as the baby presses on your bladder.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 39</h5>
-            <p class="card-text"> The baby’s chest is becoming stronger. Nesting instincts may lead to strong desire to prepare home and life for baby.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    
-    <div class="card my-3">
-        <div class="card-body">
-            <h5 class="card-title">Week 40</h5>
-            <p class="card-text"> Your baby is considered full-term now. You may feel discomfort as you wait for labor to start. You might feel anxious and excited as your due date is near.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
-    </div>
     </div>
     <div class="container tab-pane" id="faq" role="tabpanel">
-      <h3 class="title">FAQ Panel Content</h3>
+      <h1>Frequently Asked Questions</h1>
+      <div class="search-box mb-3 mt-3">
+        <input type="text" class="form-control" id="faq-search" placeholder="Search...">
+      </div>
+      <div class="faq-cards"></div>
     </div>
     <div class="container tab-pane" id="resources" role="tabpanel">
-      <h3 class="title">Resources Panel Content</h3>
+      <h1>Resources</h3>
+      <div class="search-box mb-3 mt-3">
+        <input type="text" class="form-control" id="resource-search" placeholder="Search resources...">
+      </div>
+      <div class="resource-cards"></div>
     </div>
     <div class="container tab-pane" id="settings" role="tabpanel">
       <h3 class="title">Settings Panel Content</h3>
     </div>
   </div>
-  
+
   <nav class="nav nav-pills nav-fill floatingTab">
-    <a class="nav-item nav-link rounded-0 active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab">
+    <a class="nav-item nav-link rounded-0 active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" style="background-color: var(--malone-light-blue);">
       <span class="big-nav-icon fas fa-home icon"></span>
       <span class="small-nav-label">Home</span>
     </a>
-    <a class="nav-item nav-link rounded-0" id="faq-tab" data-bs-toggle="tab" href="#faq" role="tab">
+    <a class="nav-item nav-link rounded-0" id="faq-tab" data-bs-toggle="tab" href="#faq" role="tab" style="background-color: var(--malone-light-blue);">
       <span class="big-nav-icon fas fa-question-circle icon"></span>
       <span class="small-nav-label">FAQ</span>
     </a>
-    <a class="nav-item nav-link rounded-0" id="resources-tab" data-bs-toggle="tab" href="#resources" role="tab">
+    <a class="nav-item nav-link rounded-0" id="resources-tab" data-bs-toggle="tab" href="#resources" role="tab" style="background-color: var(--malone-light-blue);">
       <span class="big-nav-icon fas fa-book icon"></span>
       <span class="small-nav-label">Resources</span>
     </a>
-    <a class="nav-item nav-link rounded-0" id="settings-tab" data-bs-toggle="tab" href="#settings" role="tab">
+    <a class="nav-item nav-link rounded-0" id="settings-tab" data-bs-toggle="tab" href="#settings" role="tab" style="background-color: var(--malone-light-blue);">
       <span class="big-nav-icon fas fa-cog icon"></span>
       <span class="small-nav-label">Settings</span>
     </a>
