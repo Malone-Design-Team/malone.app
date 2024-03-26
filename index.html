@@ -19,7 +19,7 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
 
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     fetch('./markdown/home.md')
        .then(response => {
          if (!response.ok) {
@@ -30,12 +30,49 @@
        })
        .then(markdown => {
           var html = marked.parse(markdown);
-          document.getElementById('home-content').innerHTML = html;
+          document.getElementById('home-content').innerHTML += html;
        })
        .catch(error => {
           console.log(error);
        });
- </script>
+ </script> -->
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const weekFiles = [
+        './markdown/weeks/week1.md',
+        './markdown/weeks/week2.md',
+        './markdown/weeks/week3.md',
+        './markdown/weeks/week4.md',
+        './markdown/weeks/week5.md'
+      ];
+      const weekContainer = document.querySelector('#home-content');
+
+      function loadWeekContent(index) {
+        if (index >= weekFiles.length) return;
+
+        fetch(weekFiles[index])
+          .then(response => {
+            if (!response.ok) {
+              throw new Error("HTTP error " + response.status);
+            }
+            return response.text();
+          })
+          .then(markdown => {
+            const html = marked.parse(markdown);
+            const doc = new DOMParser().parseFromString(html, "text/html");
+            const card = document.createElement('div');
+            card.appendChild(doc.body);
+            weekContainer.appendChild(card);
+            loadWeekContent(index + 1); // Load the next file
+          })
+          .catch(error => {
+            console.error('Error loading week:', error);
+          });
+      }
+
+      loadWeekContent(0); // Start loading from the first file
+    });
+  </script>
  <script type="text/javascript">
    document.addEventListener('DOMContentLoaded', (event) => {
      const faqFiles = [
@@ -148,7 +185,92 @@
       <div class="resource-cards"></div>
     </div>
     <div class="container tab-pane" id="settings" role="tabpanel">
-      <h3 class="title">Settings Panel Content</h3>
+      <h3 class="title">Settings</h3>
+      <div class="settings-controls">
+        <form id="settings-form">
+          <div class="mb-3">
+            <label for="expected-day" class="form-label">Enter your due date/your child's birth date:</label>
+            <input type="date" id="expected-day" class="form-control" name="expectedDay">
+          </div>
+          <div class="mb-3">
+            <span class="form-label">Are you the...?</span>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="role" id="role-mother" value="Mother">
+              <label class="form-check-label" for="role-mother">
+                Mother
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="role" id="role-father-partner" value="Father/Partner">
+              <label class="form-check-label" for="role-father-partner">
+                Father/Partner
+              </label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <span class="form-label">Check all topics you wish to receive information on:</span>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="communication-development" name="communication" value="Development">
+              <label class="form-check-label" for="communication-development">
+                Development
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="communication-mental-health" name="communication" value="Mental Health">
+              <label class="form-check-label" for="communication-mental-health">
+                Mental Health
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="communication-nutrition" name="communication" value="Nutrition">
+              <label class="form-check-label" for="communication-nutrition">
+                Nutrition
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="communication-exercise" name="communication" value="Exercise">
+              <label class="form-check-label" for="communication-exercise">
+                Exercise
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Save Settings</button>
+        </form>
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const settingsForm = document.getElementById('settings-form');
+          const expectedDayInput = document.getElementById('expected-day');
+          const roleInputs = document.querySelectorAll('input[name="role"]');
+          const communicationInputs = document.querySelectorAll('input[name="communication"]');
+
+          // Load settings from local storage
+          expectedDayInput.value = localStorage.getItem('expectedDay') || '';
+          roleInputs.forEach(input => {
+            if(input.value === localStorage.getItem('role')) {
+              input.checked = true;
+            }
+          });
+          communicationInputs.forEach(input => {
+            input.checked = localStorage.getItem(input.value) === 'true';
+          });
+
+          // Save settings to local storage
+          settingsForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            localStorage.setItem('expectedDay', expectedDayInput.value);
+            roleInputs.forEach(input => {
+              if(input.checked) {
+                localStorage.setItem('role', input.value);
+              }
+            });
+            communicationInputs.forEach(input => {
+              localStorage.setItem(input.value, input.checked);
+            });
+            alert('Settings saved!');
+          });
+        });
+      </script>
     </div>
   </div>
 
