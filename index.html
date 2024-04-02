@@ -61,7 +61,7 @@
             const html = marked.parse(markdown);
             const doc = new DOMParser().parseFromString(html, "text/html");
             const card = document.createElement('div');
-            card.appendChild(doc.body);
+            card.append(...doc.body.childNodes);
             weekContainer.appendChild(card);
             loadWeekContent(index + 1); // Load the next file
           })
