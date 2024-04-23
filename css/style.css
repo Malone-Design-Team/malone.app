@@ -1,6 +1,7 @@
 :root {
   --malone-dark-blue: rgb(26, 65, 104);
-  --malone-light-blue: rgb(73, 162, 178);
+  --malone-light-blue: rgb(83, 77, 153);
+  --malone-background-color: rgb(252, 241, 235);
 }
 
 body {
@@ -9,6 +10,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background-color: var(--malone-background-color);
 }
 
 .fullscreen {
@@ -34,8 +36,8 @@ body {
   border-radius: 0px;
 }
 .nav-link {
-  color: #000;
-  text-align: center;
+	color: var(--malone-dark-blue);
+	text-align: center;
 }
 
 .nav-link * {
