@@ -51,7 +51,8 @@ nav {
 .nav-pills .nav-item {
 	background-color: var(--malone-light-blue);
 	color: white;
-	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-bottom: 50px;
 }
 
 .nav-pills .nav-item.active {
