@@ -7,6 +7,19 @@ window.onload = () => {
 };
 
 document.addEventListener("DOMContentLoaded", (event) => {
+  const weekNavigation = document.getElementById('week-navigation');
+  const tabLinks = document.querySelectorAll('.nav-link');
+
+  tabLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (link.id === 'home-tab') {
+        weekNavigation.style.display = 'flex';
+      } else {
+        weekNavigation.style.display = 'none';
+      }
+    });
+  });
+
   // home page week loader
   const weekFiles = [
     "./markdown/weeks/week1.md",
@@ -16,9 +29,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     "./markdown/weeks/week5.md",
   ];
   const weekContainer = document.querySelector("#home-content");
+  let currentWeekIndex = 0;
 
   function loadWeekContent(index) {
-    if (index >= weekFiles.length) return;
+    if (index < 0 || index >= weekFiles.length) return;
 
     fetch(weekFiles[index])
       .then((response) => {
@@ -30,17 +44,42 @@ document.addEventListener("DOMContentLoaded", (event) => {
       .then((markdown) => {
         const html = marked.parse(markdown);
         const doc = new DOMParser().parseFromString(html, "text/html");
+        weekContainer.innerHTML = ''; // Clear previous content
         const card = document.createElement("div");
         card.append(...doc.body.childNodes);
         weekContainer.appendChild(card);
-        loadWeekContent(index + 1); // Load the next file
+        updateWeekNavigation();
       })
       .catch((error) => {
         console.error("Error loading week:", error);
       });
   }
 
-  loadWeekContent(0); // Start loading from the first file
+  function updateWeekNavigation() {
+    const prevWeekBtn = document.getElementById('prevWeek');
+    const nextWeekBtn = document.getElementById('nextWeek');
+    const weekIndicator = document.getElementById('weekIndicator');
+
+    prevWeekBtn.disabled = currentWeekIndex === 0;
+    nextWeekBtn.disabled = currentWeekIndex === weekFiles.length - 1;
+    weekIndicator.textContent = `Week ${currentWeekIndex + 1}`;
+  }
+
+  document.getElementById('prevWeek').addEventListener('click', () => {
+    if (currentWeekIndex > 0) {
+      currentWeekIndex--;
+      loadWeekContent(currentWeekIndex);
+    }
+  });
+
+  document.getElementById('nextWeek').addEventListener('click', () => {
+    if (currentWeekIndex < weekFiles.length - 1) {
+      currentWeekIndex++;
+      loadWeekContent(currentWeekIndex);
+    }
+  });
+
+  loadWeekContent(currentWeekIndex); // Start loading from the first file
 
   // FAQ page loader
   const faqFiles = [
@@ -144,7 +183,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     input.checked = localStorage.getItem(input.value) === 'true';
   });
 
-  // Save settings to local storage
+  // save settings to browser storage
   settingsForm.addEventListener('submit', function(event) {
     event.preventDefault();
     localStorage.setItem('expectedDay', expectedDayInput.value);
