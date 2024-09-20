@@ -53,21 +53,28 @@ document.addEventListener("DOMContentLoaded", (event) => {
     showWeekNavigation();
   }
 
+  // Load modules
+  loadModules();
+
   // home page week loader
-  const weekFiles = [
-    "./markdown/weeks/week1.md",
-    "./markdown/weeks/week2.md",
-    "./markdown/weeks/week3.md",
-    "./markdown/weeks/week4.md",
-    "./markdown/weeks/week5.md",
-  ];
   const weekContainer = document.querySelector("#home-content");
   let currentWeekIndex = 0;
 
-  function loadWeekContent(index) {
-    if (index < 0 || index >= weekFiles.length) return;
+  function calculateCurrentWeek() {
+    const expectedDay = localStorage.getItem('expectedDay');
+    if (!expectedDay) return 1; // Default to week 1 if no date is set
 
-    fetch(weekFiles[index])
+    const expectedDate = new Date(expectedDay);
+    const today = new Date();
+    const diffTime = Math.abs(today - expectedDate);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    return Math.ceil(diffDays / 7);
+  }
+
+  function loadWeekContent(week) {
+    const weekFile = `./markdown/weeks/week${week}.md`;
+
+    fetch(weekFile)
       .then((response) => {
         if (!response.ok) {
           throw new Error("HTTP error " + response.status);
@@ -85,6 +92,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
       })
       .catch((error) => {
         console.error("Error loading week:", error);
+        weekContainer.innerHTML = ''; // Clear previous content
+        alert(`Week ${week} content is not available.`);
       });
   }
 
@@ -93,26 +102,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const nextWeekBtn = document.getElementById('nextWeek');
     const weekIndicator = document.getElementById('weekIndicator');
 
-    prevWeekBtn.disabled = currentWeekIndex === 0;
-    nextWeekBtn.disabled = currentWeekIndex === weekFiles.length - 1;
-    weekIndicator.textContent = `Week ${currentWeekIndex + 1}`;
+    prevWeekBtn.disabled = currentWeekIndex === 1;
+    nextWeekBtn.disabled = false; // Always allow moving to next week
+    weekIndicator.textContent = `Week ${currentWeekIndex}`;
   }
 
   document.getElementById('prevWeek').addEventListener('click', () => {
-    if (currentWeekIndex > 0) {
+    if (currentWeekIndex > 1) {
       currentWeekIndex--;
       loadWeekContent(currentWeekIndex);
     }
   });
 
   document.getElementById('nextWeek').addEventListener('click', () => {
-    if (currentWeekIndex < weekFiles.length - 1) {
-      currentWeekIndex++;
-      loadWeekContent(currentWeekIndex);
-    }
+    currentWeekIndex++;
+    loadWeekContent(currentWeekIndex);
   });
 
-  loadWeekContent(currentWeekIndex); // Start loading from the first file
+  // Start loading from the calculated current week
+  currentWeekIndex = calculateCurrentWeek();
+  loadWeekContent(currentWeekIndex);
 
   // FAQ page loader
   const faqFiles = [
@@ -229,5 +238,159 @@ document.addEventListener("DOMContentLoaded", (event) => {
       localStorage.setItem(input.value, input.checked);
     });
     alert('Settings saved!');
+
+    // Update the current week and load the new content
+    currentWeekIndex = calculateCurrentWeek();
+    loadWeekContent(currentWeekIndex);
+
+    // Ensure we're on the home tab to see the updated week content
+    const homeTab = document.getElementById('home-tab');
+    homeTab.click();
   });
 });
+
+function loadModules() {
+  const modulesContainer = document.querySelector("#modules-content");
+  const modules = [
+    { name: "Exercise", folder: "exercise" },
+    { name: "Mental Health", folder: "mental-health" },
+    { name: "Mindfulness", folder: "mindfulness" },
+    { name: "Nutrition", folder: "nutrition" },
+    { name: "Sexual Health", folder: "sexual-health" },
+    { name: "Social Support", folder: "social-support" }
+  ];
+
+  const grid = document.createElement("div");
+  grid.className = "row row-cols-2 row-cols-md-2 g-4 module-grid";
+
+  modules.forEach(module => {
+    const card = document.createElement("div");
+    card.className = "col";
+    card.innerHTML = `
+      <div class="card h-100 module-card" data-folder="${module.folder}">
+        <div class="card-body text-center">
+          <i class="fas fa-folder fa-3x mb-3"></i>
+          <h5 class="card-title">${module.name}</h5>
+        </div>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+
+  modulesContainer.innerHTML = '';
+  modulesContainer.appendChild(grid);
+
+  // Add click event listener to the container
+  modulesContainer.addEventListener('click', (event) => {
+    const moduleCard = event.target.closest('.module-card');
+    if (moduleCard) {
+      const folder = moduleCard.dataset.folder;
+      loadModuleContents(folder);
+    }
+  });
+
+  // Hide the module navigation when showing the main modules list
+  updateModuleNavigation();
+
+  document.querySelector('#modules h1').style.display = 'block';
+}
+
+function loadModuleContents(folder, path = '') {
+  const modulesContainer = document.querySelector("#modules-content");
+  const folderPath = `./markdown/modules/${folder}${path}`;
+
+  // Fetch the list of files and folders in the current directory
+  fetch(`${folderPath}/index.json`)
+    .then(response => response.json())
+    .then(items => {
+      const grid = document.createElement("div");
+      grid.className = "row row-cols-2 row-cols-md-2 g-4 module-grid";
+
+      items.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "col";
+        const isFolder = item.type === 'directory' || item.type === 'folder';
+        card.innerHTML = `
+          <div class="card h-100 ${isFolder ? 'folder-card' : 'file-card'}" data-folder="${folder}" data-path="${path}" data-item="${item.name}">
+            <div class="card-body text-center">
+              <i class="fas ${isFolder ? 'fa-folder' : 'fa-file-alt'} fa-3x mb-3"></i>
+              <h5 class="card-title">${item.name.replace('.md', '')}</h5>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+
+      modulesContainer.innerHTML = '';
+      modulesContainer.appendChild(grid);
+
+      // Add click event listener for files and folders
+      grid.addEventListener('click', (event) => {
+        const card = event.target.closest('.folder-card, .file-card');
+        if (card) {
+          const folder = card.dataset.folder;
+          const currentPath = card.dataset.path;
+          const item = card.dataset.item;
+          if (card.classList.contains('folder-card')) {
+            loadModuleContents(folder, `${currentPath}/${item}`);
+          } else {
+            loadModuleFile(folder, `${currentPath}/${item}`);
+          }
+        }
+      });
+
+      updateModuleNavigation(folder, path);
+
+      // Show the modules title
+      document.querySelector('#modules h1').style.display = 'none';
+    })
+    .catch(error => console.error(`Error loading module contents:`, error));
+}
+
+function updateModuleNavigation(folder, path) {
+  const moduleNavigation = document.getElementById('module-navigation');
+  const backButton = moduleNavigation.querySelector('button');
+  const folderIndicator = moduleNavigation.querySelector('span');
+
+  backButton.innerHTML = '&lt; Modules';
+  backButton.onclick = loadModules;
+  folderIndicator.textContent = path ? path.split('/').pop() || folder : folder;
+  moduleNavigation.style.display = folder ? 'flex' : 'none';
+}
+
+function loadModuleFile(folder, filePath) {
+  const modulesContainer = document.querySelector("#modules-content");
+  const fullPath = `./markdown/modules/${folder}${filePath}`;
+
+  // First, check if the path is a file
+  fetch(fullPath)
+    .then(response => {
+      if (response.ok) {
+        // If it's a file, load its content
+        return response.text().then(markdown => {
+          const html = marked.parse(markdown);
+          modulesContainer.innerHTML = '';
+
+          const content = document.createElement("div");
+          content.className = "markdown-content";
+          content.innerHTML = html;
+          modulesContainer.appendChild(content);
+
+          // Hide the modules title when viewing an article
+          document.querySelector('#modules h1').style.display = 'none';
+        });
+      } else {
+        // If it's not a file, check if it's a directory
+        return fetch(`${fullPath}/index.json`)
+          .then(response => {
+            if (response.ok) {
+              // If it's a directory, load its contents
+              loadModuleContents(folder, filePath);
+            } else {
+              throw new Error('Path is neither a file nor a directory');
+            }
+          });
+      }
+    })
+    .catch(error => console.error(`Error loading file or directory:`, error));
+}

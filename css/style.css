@@ -84,7 +84,11 @@ nav {
   justify-content: center;
 }
 
-.week-navigation {
+.module-grid {
+  padding: 20px;
+}
+
+.week-navigation, .module-navigation {
   position: fixed;
   bottom: calc(var(--nav-height) - 1px);
   left: 0;
@@ -97,34 +101,37 @@ nav {
   height: var(--week-nav-height);
 }
 
-.week-navigation button {
+.week-navigation button, .module-navigation button {
   background-color: var(--malone-light-blue);
   color: white;
   border: none;
-  flex-grow: 0;
-  flex-shrink: 0;
-  width: var(--tab-icon-width);
+  flex: 1;
   height: 100%;
-  border-radius: 8px;
+  border-radius: 0;
   transition: all 0.3s ease;
+  padding: 0 10px;
 }
 
-.week-navigation button:hover {
+.week-navigation button:hover, .module-navigation button:hover {
   background-color: var(--malone-light-blue);
   color: var(--malone-background-color);
 }
 
-
-.week-navigation span {
-	background-color: var(--malone-light-blue);
+.week-navigation span, .module-navigation span {
+  background-color: var(--malone-light-blue);
   color: var(--malone-background-color);
   padding: 10px 20px;
-  flex-grow: 1;
+  flex: 1;
   text-align: center;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.module-navigation {
+  display: none;
+  height: 5vh;
 }
 
 .icon {
