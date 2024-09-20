@@ -6,7 +6,7 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="images/malone-icon-152.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Malone">
   <meta name="msapplication-TileImage" content="images/malone-icon-144.png">
@@ -23,6 +23,11 @@
   <div class="tab-content">
     <div class="container tab-pane active" id="home" role="tabpanel">
       <div id="home-content">
+      </div>
+    </div>
+    <div class="container tab-pane" id="modules" role="tabpanel">
+      <h1>Modules</h1>
+      <div id="modules-content">
       </div>
     </div>
     <div class="container tab-pane" id="faq" role="tabpanel">
@@ -96,15 +101,18 @@
   </div>
 
   <div id="week-navigation" class="week-navigation">
-    <button id="prevWeek" class="btn btn-primary">&lt;</button>
+    <button id="prevWeek" class="nav-item nav-link rounded-0 week-nav-button">&lt;</button>
     <span id="weekIndicator">Week 1</span>
-    <button id="nextWeek" class="btn btn-primary">&gt;</button>
+    <button id="nextWeek" class="nav-item nav-link rounded-0 week-nav-button">&gt;</button>
   </div>
-
   <nav class="nav nav-pills nav-fill floatingTab">
     <a class="nav-item nav-link rounded-0 active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab">
       <span class="big-nav-icon fas fa-home icon"></span>
       <span class="small-nav-label">Home</span>
+    </a>
+    <a class="nav-item nav-link rounded-0" id="modules-tab" data-bs-toggle="tab" href="#modules" role="tab">
+      <span class="big-nav-icon fas fa-cubes icon"></span>
+      <span class="small-nav-label">Modules</span>
     </a>
     <a class="nav-item nav-link rounded-0" id="faq-tab" data-bs-toggle="tab" href="#faq" role="tab">
       <span class="big-nav-icon fas fa-question-circle icon"></span>

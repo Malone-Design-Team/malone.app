@@ -9,16 +9,49 @@ window.onload = () => {
 document.addEventListener("DOMContentLoaded", (event) => {
   const weekNavigation = document.getElementById('week-navigation');
   const tabLinks = document.querySelectorAll('.nav-link');
+  const homeTab = document.getElementById('home-tab');
+
+  function showWeekNavigation() {
+    weekNavigation.style.display = 'flex';
+  }
+
+  function hideWeekNavigation() {
+    weekNavigation.style.display = 'none';
+  }
 
   tabLinks.forEach(link => {
     link.addEventListener('click', () => {
       if (link.id === 'home-tab') {
-        weekNavigation.style.display = 'flex';
+        showWeekNavigation();
       } else {
-        weekNavigation.style.display = 'none';
+        hideWeekNavigation();
       }
     });
   });
+
+  // Ensure week navigation stays visible when interacting with it
+  weekNavigation.addEventListener('click', (event) => {
+    event.stopPropagation();
+    showWeekNavigation();
+  });
+
+  // Show week navigation when home tab is active
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+        if (homeTab.classList.contains('active')) {
+          showWeekNavigation();
+        }
+      }
+    });
+  });
+
+  observer.observe(homeTab, { attributes: true });
+
+  // Initial check
+  if (homeTab.classList.contains('active')) {
+    showWeekNavigation();
+  }
 
   // home page week loader
   const weekFiles = [

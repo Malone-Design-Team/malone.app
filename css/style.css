@@ -2,6 +2,10 @@
   --malone-dark-blue: rgb(26, 65, 104);
   --malone-light-blue: rgb(83, 77, 153);
   --malone-background-color: rgb(252, 241, 235);
+  --nav-height: 90px;
+  --week-nav-height: 50px;
+  --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+  --total-bottom-height: calc(var(--nav-height) + var(--week-nav-height) + var(--safe-area-inset-bottom));
 }
 
 body {
@@ -30,14 +34,22 @@ body {
 
 .floatingTab {
   position: fixed;
-  bottom: var(--safe-area-inset-bottom);
-  left: 0px;
-  right: 0px;
-  border-radius: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0;
+  padding-bottom: var(--safe-area-inset-bottom);
+  background-color: var(--malone-light-blue);
+  height: var(--nav-height);
 }
+:root {
+  --tab-icon-width: 20vw;
+}
+
 .nav-link {
 	color: var(--malone-dark-blue);
 	text-align: center;
+  width: var(--tab-icon-width);
 }
 
 .nav-link * {
@@ -60,24 +72,61 @@ nav {
 	color: var(--malone-dark-blue);
 }
 
-
-/* .nav-item {
-	color: red;
-	background-color: var(--malone-light-blue);
+.tab-content {
+  height: calc(100vh - var(--total-bottom-height));
+  overflow-y: auto;
+  padding-bottom: var(--total-bottom-height);
 }
 
-.nav-item:hover {
-	color: var(--malone-dark-blue);
-	background-color: var(--malone-light-blue);
-} */
-
 .tab-content .tab-pane {
-  height: calc(100vh - 150px);
-  overflow-y: scroll;
   width: 100%;
   align-items: center;
   justify-content: center;
 }
+
+.week-navigation {
+  position: fixed;
+  bottom: calc(var(--nav-height) - 1px);
+  left: 0;
+  right: 0;
+  background-color: var(--malone-light-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 101;
+  height: var(--week-nav-height);
+}
+
+.week-navigation button {
+  background-color: var(--malone-light-blue);
+  color: white;
+  border: none;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: var(--tab-icon-width);
+  height: 100%;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.week-navigation button:hover {
+  background-color: var(--malone-light-blue);
+  color: var(--malone-background-color);
+}
+
+
+.week-navigation span {
+	background-color: var(--malone-light-blue);
+  color: var(--malone-background-color);
+  padding: 10px 20px;
+  flex-grow: 1;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .icon {
   display: block;
   text-align: center;
@@ -109,7 +158,7 @@ h2 {
  padding: 10px;
  width: 100%;
  position: sticky;
- top: 50px; /* Adjusted to prevent overlap with h1 */
+ top: 3.125rem; /* Using rem for better responsiveness */
  z-index: 9;
  font-style: italic;
 }
@@ -128,4 +177,14 @@ p, h3, h4, .card, .search-box {
 
 .card-title, .card-text {
 	margin: 0px;
+}
+
+.btn {
+	background-color: var(--malone-light-blue);
+	color: var(--malone-background-color)
+}
+
+.btn:hover {
+	background-color: var(--malone-light-blue);
+	color: var(--malone-background-color)
 }
