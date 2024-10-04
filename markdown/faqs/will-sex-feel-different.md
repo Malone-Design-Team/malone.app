@@ -1,3 +1,3 @@
-### Q: Will it hurt or feel different?
+### Q: Will sex hurt or feel different after giving birth?
 
 A: Your vagina may be more dry and sore due to hormonal changes, especially if you breastfeed. If you are recovering from an episiotomy or perineal tears, you may also have discomfort during sex. [(Source)](https://www.acog.org/womens-health/faqs/a-partners-guide-to-pregnancy#:~:text=When%20is%20it%20OK%20to,about%202%20weeks%20following%20birth) Additionally, following a vaginal delivery, your pelvic floor muscles can relax causing changes to muscle tone and therefore affecting sensation during sex. [(Source)](https://www.doi.org/10.1016/j.jsxm.2016.01.004)
