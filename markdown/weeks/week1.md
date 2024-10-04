@@ -21,4 +21,4 @@ You should contact your health care provider in the next 3 weeks to talk about y
     - Have you heard of the breath counting exercise? Give it a shot if you’re feeling anxious! **[insert link to breath counting exercise]**
 
 ### Breastfeeding 
-For a few days after giving birth, you might have full, firm, sore breasts. Breastfeed your baby often on both breasts to help keep them from overfilling. 
+- For a few days after giving birth, you might have full, firm, sore breasts. Breastfeed your baby often on both breasts to help keep them from overfilling. 
