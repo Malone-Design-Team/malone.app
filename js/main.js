@@ -7,21 +7,21 @@ window.onload = () => {
 };
 
 document.addEventListener("DOMContentLoaded", (event) => {
-  const weekNavigation = document.getElementById('week-navigation');
-  const tabLinks = document.querySelectorAll('.nav-link');
-  const homeTab = document.getElementById('home-tab');
+  const weekNavigation = document.getElementById("week-navigation");
+  const tabLinks = document.querySelectorAll(".nav-link");
+  const homeTab = document.getElementById("home-tab");
 
   function showWeekNavigation() {
-    weekNavigation.style.display = 'flex';
+    weekNavigation.style.display = "flex";
   }
 
   function hideWeekNavigation() {
-    weekNavigation.style.display = 'none';
+    weekNavigation.style.display = "none";
   }
 
-  tabLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (link.id === 'home-tab') {
+  tabLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (link.id === "home-tab") {
         showWeekNavigation();
       } else {
         hideWeekNavigation();
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
 
   // Ensure week navigation stays visible when interacting with it
-  weekNavigation.addEventListener('click', (event) => {
+  weekNavigation.addEventListener("click", (event) => {
     event.stopPropagation();
     showWeekNavigation();
   });
@@ -38,8 +38,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
   // Show week navigation when home tab is active
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
-      if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-        if (homeTab.classList.contains('active')) {
+      if (
+        mutation.type === "attributes" &&
+        mutation.attributeName === "class"
+      ) {
+        if (homeTab.classList.contains("active")) {
           showWeekNavigation();
         }
       }
@@ -49,7 +52,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   observer.observe(homeTab, { attributes: true });
 
   // Initial check
-  if (homeTab.classList.contains('active')) {
+  if (homeTab.classList.contains("active")) {
     showWeekNavigation();
   }
 
@@ -61,7 +64,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   let currentWeekIndex = 0;
 
   function calculateCurrentWeek() {
-    const expectedDay = localStorage.getItem('expectedDay');
+    const expectedDay = localStorage.getItem("expectedDay");
     if (!expectedDay) return 1; // Default to week 1 if no date is set
 
     const expectedDate = new Date(expectedDay);
@@ -84,7 +87,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       .then((markdown) => {
         const html = marked.parse(markdown);
         const doc = new DOMParser().parseFromString(html, "text/html");
-        weekContainer.innerHTML = ''; // Clear previous content
+        weekContainer.innerHTML = ""; // Clear previous content
         const card = document.createElement("div");
         card.append(...doc.body.childNodes);
         weekContainer.appendChild(card);
@@ -92,29 +95,30 @@ document.addEventListener("DOMContentLoaded", (event) => {
       })
       .catch((error) => {
         console.error("Error loading week:", error);
-        weekContainer.innerHTML = ''; // Clear previous content
+        currentWeekIndex--;
         alert(`Week ${week} content is not available.`);
       });
   }
 
   function updateWeekNavigation() {
-    const prevWeekBtn = document.getElementById('prevWeek');
-    const nextWeekBtn = document.getElementById('nextWeek');
-    const weekIndicator = document.getElementById('weekIndicator');
+    const prevWeekBtn = document.getElementById("prevWeek");
+    const nextWeekBtn = document.getElementById("nextWeek");
+    const weekIndicator = document.getElementById("weekIndicator");
+    const totalPages = 7;
 
     prevWeekBtn.disabled = currentWeekIndex === 1;
-    nextWeekBtn.disabled = false; // Always allow moving to next week
+    nextWeekBtn.disabled = currentWeekIndex >= totalPages; // Always allow moving to next week
     weekIndicator.textContent = `Week ${currentWeekIndex}`;
   }
 
-  document.getElementById('prevWeek').addEventListener('click', () => {
+  document.getElementById("prevWeek").addEventListener("click", () => {
     if (currentWeekIndex > 1) {
       currentWeekIndex--;
       loadWeekContent(currentWeekIndex);
     }
   });
 
-  document.getElementById('nextWeek').addEventListener('click', () => {
+  document.getElementById("nextWeek").addEventListener("click", () => {
     currentWeekIndex++;
     loadWeekContent(currentWeekIndex);
   });
@@ -209,42 +213,44 @@ document.addEventListener("DOMContentLoaded", (event) => {
       });
   });
   // settings
-  const settingsForm = document.getElementById('settings-form');
-  const expectedDayInput = document.getElementById('expected-day');
+  const settingsForm = document.getElementById("settings-form");
+  const expectedDayInput = document.getElementById("expected-day");
   const roleInputs = document.querySelectorAll('input[name="role"]');
-  const communicationInputs = document.querySelectorAll('input[name="communication"]');
+  const communicationInputs = document.querySelectorAll(
+    'input[name="communication"]',
+  );
 
   // Load settings from local storage
-  expectedDayInput.value = localStorage.getItem('expectedDay') || '';
-  roleInputs.forEach(input => {
-    if(input.value === localStorage.getItem('role')) {
+  expectedDayInput.value = localStorage.getItem("expectedDay") || "";
+  roleInputs.forEach((input) => {
+    if (input.value === localStorage.getItem("role")) {
       input.checked = true;
     }
   });
-  communicationInputs.forEach(input => {
-    input.checked = localStorage.getItem(input.value) === 'true';
+  communicationInputs.forEach((input) => {
+    input.checked = localStorage.getItem(input.value) === "true";
   });
 
   // save settings to browser storage
-  settingsForm.addEventListener('submit', function(event) {
+  settingsForm.addEventListener("submit", function (event) {
     event.preventDefault();
-    localStorage.setItem('expectedDay', expectedDayInput.value);
-    roleInputs.forEach(input => {
-      if(input.checked) {
-        localStorage.setItem('role', input.value);
+    localStorage.setItem("expectedDay", expectedDayInput.value);
+    roleInputs.forEach((input) => {
+      if (input.checked) {
+        localStorage.setItem("role", input.value);
       }
     });
-    communicationInputs.forEach(input => {
+    communicationInputs.forEach((input) => {
       localStorage.setItem(input.value, input.checked);
     });
-    alert('Settings saved!');
+    alert("Settings saved!");
 
     // Update the current week and load the new content
     currentWeekIndex = calculateCurrentWeek();
     loadWeekContent(currentWeekIndex);
 
     // Ensure we're on the home tab to see the updated week content
-    const homeTab = document.getElementById('home-tab');
+    const homeTab = document.getElementById("home-tab");
     homeTab.click();
   });
 });
@@ -257,13 +263,13 @@ function loadModules() {
     { name: "Mindfulness", folder: "mindfulness" },
     { name: "Nutrition", folder: "nutrition" },
     { name: "Sexual Health", folder: "sexual-health" },
-    { name: "Social Support", folder: "social-support" }
+    { name: "Social Support", folder: "social-support" },
   ];
 
   const grid = document.createElement("div");
   grid.className = "row row-cols-2 row-cols-md-2 g-4 module-grid";
 
-  modules.forEach(module => {
+  modules.forEach((module) => {
     const card = document.createElement("div");
     card.className = "col";
     card.innerHTML = `
@@ -277,12 +283,12 @@ function loadModules() {
     grid.appendChild(card);
   });
 
-  modulesContainer.innerHTML = '';
+  modulesContainer.innerHTML = "";
   modulesContainer.appendChild(grid);
 
   // Add click event listener to the container
-  modulesContainer.addEventListener('click', (event) => {
-    const moduleCard = event.target.closest('.module-card');
+  modulesContainer.addEventListener("click", (event) => {
+    const moduleCard = event.target.closest(".module-card");
     if (moduleCard) {
       const folder = moduleCard.dataset.folder;
       loadModuleContents(folder);
@@ -292,46 +298,46 @@ function loadModules() {
   // Hide the module navigation when showing the main modules list
   updateModuleNavigation();
 
-  document.querySelector('#modules h1').style.display = 'block';
+  document.querySelector("#modules h1").style.display = "block";
 }
 
-function loadModuleContents(folder, path = '') {
+function loadModuleContents(folder, path = "") {
   const modulesContainer = document.querySelector("#modules-content");
   const folderPath = `./markdown/modules/${folder}${path}`;
 
   // Fetch the list of files and folders in the current directory
   fetch(`${folderPath}/index.json`)
-    .then(response => response.json())
-    .then(items => {
+    .then((response) => response.json())
+    .then((items) => {
       const grid = document.createElement("div");
       grid.className = "row row-cols-2 row-cols-md-2 g-4 module-grid";
 
-      items.forEach(item => {
+      items.forEach((item) => {
         const card = document.createElement("div");
         card.className = "col";
-        const isFolder = item.type === 'directory' || item.type === 'folder';
+        const isFolder = item.type === "directory" || item.type === "folder";
         card.innerHTML = `
-          <div class="card h-100 ${isFolder ? 'folder-card' : 'file-card'}" data-folder="${folder}" data-path="${path}" data-item="${item.name}">
+          <div class="card h-100 ${isFolder ? "folder-card" : "file-card"}" data-folder="${folder}" data-path="${path}" data-item="${item.name}">
             <div class="card-body text-center">
-              <i class="fas ${isFolder ? 'fa-folder' : 'fa-file-alt'} fa-3x mb-3"></i>
-              <h5 class="card-title">${item.name.replace('.md', '')}</h5>
+              <i class="fas ${isFolder ? "fa-folder" : "fa-file-alt"} fa-3x mb-3"></i>
+              <h5 class="card-title">${item.name.replace(".md", "")}</h5>
             </div>
           </div>
         `;
         grid.appendChild(card);
       });
 
-      modulesContainer.innerHTML = '';
+      modulesContainer.innerHTML = "";
       modulesContainer.appendChild(grid);
 
       // Add click event listener for files and folders
-      grid.addEventListener('click', (event) => {
-        const card = event.target.closest('.folder-card, .file-card');
+      grid.addEventListener("click", (event) => {
+        const card = event.target.closest(".folder-card, .file-card");
         if (card) {
           const folder = card.dataset.folder;
           const currentPath = card.dataset.path;
           const item = card.dataset.item;
-          if (card.classList.contains('folder-card')) {
+          if (card.classList.contains("folder-card")) {
             loadModuleContents(folder, `${currentPath}/${item}`);
           } else {
             loadModuleFile(folder, `${currentPath}/${item}`);
@@ -342,20 +348,20 @@ function loadModuleContents(folder, path = '') {
       updateModuleNavigation(folder, path);
 
       // Show the modules title
-      document.querySelector('#modules h1').style.display = 'none';
+      document.querySelector("#modules h1").style.display = "none";
     })
-    .catch(error => console.error(`Error loading module contents:`, error));
+    .catch((error) => console.error(`Error loading module contents:`, error));
 }
 
 function updateModuleNavigation(folder, path) {
-  const moduleNavigation = document.getElementById('module-navigation');
-  const backButton = moduleNavigation.querySelector('button');
-  const folderIndicator = moduleNavigation.querySelector('span');
+  const moduleNavigation = document.getElementById("module-navigation");
+  const backButton = moduleNavigation.querySelector("button");
+  const folderIndicator = moduleNavigation.querySelector("span");
 
-  backButton.innerHTML = '&lt; Modules';
+  backButton.innerHTML = "&lt; Modules";
   backButton.onclick = loadModules;
-  folderIndicator.textContent = path ? path.split('/').pop() || folder : folder;
-  moduleNavigation.style.display = folder ? 'flex' : 'none';
+  folderIndicator.textContent = path ? path.split("/").pop() || folder : folder;
+  moduleNavigation.style.display = folder ? "flex" : "none";
 }
 
 function loadModuleFile(folder, filePath) {
@@ -364,12 +370,12 @@ function loadModuleFile(folder, filePath) {
 
   // First, check if the path is a file
   fetch(fullPath)
-    .then(response => {
+    .then((response) => {
       if (response.ok) {
         // If it's a file, load its content
-        return response.text().then(markdown => {
+        return response.text().then((markdown) => {
           const html = marked.parse(markdown);
-          modulesContainer.innerHTML = '';
+          modulesContainer.innerHTML = "";
 
           const content = document.createElement("div");
           content.className = "markdown-content";
@@ -377,20 +383,19 @@ function loadModuleFile(folder, filePath) {
           modulesContainer.appendChild(content);
 
           // Hide the modules title when viewing an article
-          document.querySelector('#modules h1').style.display = 'none';
+          document.querySelector("#modules h1").style.display = "none";
         });
       } else {
         // If it's not a file, check if it's a directory
-        return fetch(`${fullPath}/index.json`)
-          .then(response => {
-            if (response.ok) {
-              // If it's a directory, load its contents
-              loadModuleContents(folder, filePath);
-            } else {
-              throw new Error('Path is neither a file nor a directory');
-            }
-          });
+        return fetch(`${fullPath}/index.json`).then((response) => {
+          if (response.ok) {
+            // If it's a directory, load its contents
+            loadModuleContents(folder, filePath);
+          } else {
+            throw new Error("Path is neither a file nor a directory");
+          }
+        });
       }
     })
-    .catch(error => console.error(`Error loading file or directory:`, error));
+    .catch((error) => console.error(`Error loading file or directory:`, error));
 }
