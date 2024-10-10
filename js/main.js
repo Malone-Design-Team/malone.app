@@ -129,11 +129,27 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 	// FAQ page loader
 	const faqFiles = [
-		"./markdown/faqs/short-example.md",
-		"./markdown/faqs/long-example.md",
-		`./markdown/faqs/partner-tired.md`,
-		`./markdown/faqs/sky-blue.md`,
-		`./markdown/faqs/maya-hee.md`,
+		"./markdown/faqs/Activity_MH.md",
+		"./markdown/faqs/Baby_Connect.md",
+		"./markdown/faqs/Body_image.md",
+		"./markdown/faqs/Bonding_Time.md",
+		"./markdown/faqs/Breast_mental_health.md",
+		"./markdown/faqs/Feeling_isolated.md",
+		"./markdown/faqs/ImproveSleep.md",
+		"./markdown/faqs/Mixed_Feelings.md",
+		"./markdown/faqs/Mom_Guilt.md",
+		"./markdown/faqs/Overwhelmed.md",
+		"./markdown/faqs/PPDepression.md",
+		"./markdown/faqs/Partner_Support.md",
+		"./markdown/faqs/Physical_Health.md",
+		"./markdown/faqs/Postpartum_resources.md",
+		"./markdown/faqs/Quick_MH_Tip.md",
+		"./markdown/faqs/Relationship_Coping.md",
+		"./markdown/faqs/Safe_Excercise.md",
+		"./markdown/faqs/Seek_health_MH.md",
+		"./markdown/faqs/Self-care.md",
+		"./markdown/faqs/when_can_i_have_sex.md",
+		"./markdown/faqs/will-sex-feel-different.md",
 	];
 	const faqContainer = document.querySelector(".faq-cards");
 
