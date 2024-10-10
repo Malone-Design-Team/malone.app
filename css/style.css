@@ -3,7 +3,7 @@
 	--malone-light-blue: rgb(83, 77, 153);
 	--malone-background-color: rgb(252, 241, 235);
 	--nav-height: 90px;
-	--week-nav-height: 50px;
+	--week-nav-height: 40px;
 	--safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
 	--total-bottom-height: calc(
 		var(--nav-height) + (var(--week-nav-height) * var(--week-nav-visible)) +
@@ -16,7 +16,6 @@ body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
 	background-color: var(--malone-background-color);
 }
 
@@ -59,6 +58,10 @@ body {
 	display: block;
 }
 
+.tab-content .tab-pane {
+	margin-bottom: 150px;
+}
+
 nav {
 	z-index: 100;
 }
@@ -73,18 +76,6 @@ nav {
 .nav-pills .nav-item.active {
 	background-color: var(--malone-background-color);
 	color: var(--malone-dark-blue);
-}
-
-.tab-content {
-	height: calc(100vh - var(--total-bottom-height));
-	overflow-y: auto;
-	padding-bottom: var(--total-bottom-height);
-}
-
-.tab-content .tab-pane {
-	width: 100%;
-	align-items: center;
-	justify-content: center;
 }
 
 .module-grid {

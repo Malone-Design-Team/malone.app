@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	  								<h5 class="text-start p-1">${question}</h5>
 	        						</div>
 	        						<div class="card-body">
-	        							<p class="card-text text-end">${answer}</p>
+	        							<p class="card-text">${answer}</p>
 	          					</div>`;
 				faqContainer.appendChild(card);
 			})
