@@ -1,11 +1,8 @@
 # Week 3
-## Another week full of information...
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque id nibh tortor id aliquet lectus proin nibh. Vestibulum lorem sed risus ultricies. Fringilla urna porttitor rhoncus dolor purus. Vestibulum rhoncus est pellentesque elit. Enim sit amet venenatis urna cursus. Ut consequat semper viverra nam libero justo laoreet sit amet.
-## Another longer subtitle, one that is more descriptive
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque id nibh tortor id aliquet lectus proin nibh. Vestibulum lorem sed risus ultricies. Fringilla urna porttitor rhoncus dolor purus. Vestibulum rhoncus est pellentesque elit.
-#### More Resources
-- [CDC's Developmental Milestones](https://www.cdc.gov/ncbddd/actearly/milestones/index.html)
-### Nutrition Tips and Tricks
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque id nibh tortor id aliquet lectus proin nibh. Vestibulum lorem sed risus ultricies. Fringilla urna porttitor rhoncus dolor purus. Vestibulum rhoncus est pellentesque elit.
-#### More Resources
-- [CDC's Nutrition Tips](https://www.cdc.gov/nutrition/infantandtoddlernutrition/index.html)
+## Health: Typical Postpartum
+- In the next few weeks, vaginal discharge will have less blood and will begin to taper off. It will turn from brown to yellow or white.
+
+## Health: Mental/Psychological
+- Anxiousness and mood swings following birth should subside within two weeks 
+    - If you are very tired, don’t feel like eating, have trouble with daily tasks, have large mood swings, or feel like harming yourself or your child, tell your doctor. These may be symptoms of postpartum depression. 
+- Do you know BIPOC female therapists in Omaha? Here’s a list of some with their relevant information! *[insert link to therapist information]*

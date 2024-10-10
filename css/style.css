@@ -1,63 +1,66 @@
 :root {
-  --malone-dark-blue: rgb(26, 65, 104);
-  --malone-light-blue: rgb(83, 77, 153);
-  --malone-background-color: rgb(252, 241, 235);
-  --nav-height: 90px;
-  --week-nav-height: 50px;
-  --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
-  --total-bottom-height: calc(var(--nav-height) + var(--week-nav-height) + var(--safe-area-inset-bottom));
+	--malone-dark-blue: rgb(26, 65, 104);
+	--malone-light-blue: rgb(83, 77, 153);
+	--malone-background-color: rgb(252, 241, 235);
+	--nav-height: 90px;
+	--week-nav-height: 50px;
+	--safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+	--total-bottom-height: calc(
+		var(--nav-height) + (var(--week-nav-height) * var(--week-nav-visible)) +
+			var(--safe-area-inset-bottom)
+	);
 }
 
 body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: var(--malone-background-color);
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: var(--malone-background-color);
 }
 
 .fullscreen {
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
 }
 
 .container {
-  width: 100%;
-  left: 0;
-  right: 0;
-  padding: 0;
-  max-width: 100%;
+	width: 100%;
+	left: 0;
+	right: 0;
+	padding: 0;
+	max-width: 100%;
 }
 
 .floatingTab {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 0;
-  padding-bottom: var(--safe-area-inset-bottom);
-  background-color: var(--malone-light-blue);
-  height: var(--nav-height);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-radius: 0;
+	padding-bottom: var(--safe-area-inset-bottom);
+	background-color: var(--malone-light-blue);
+	height: var(--nav-height);
 }
 :root {
-  --tab-icon-width: 20vw;
+	--tab-icon-width: 20vw;
 }
 
 .nav-link {
 	color: var(--malone-dark-blue);
 	text-align: center;
-  width: var(--tab-icon-width);
+	width: var(--tab-icon-width);
 }
 
 .nav-link * {
-  display: block;
+	display: block;
 }
 
 nav {
-  z-index: 100;
+	z-index: 100;
 }
 
 .nav-pills .nav-item {
@@ -73,101 +76,105 @@ nav {
 }
 
 .tab-content {
-  height: calc(100vh - var(--total-bottom-height));
-  overflow-y: auto;
-  padding-bottom: var(--total-bottom-height);
+	height: calc(100vh - var(--total-bottom-height));
+	overflow-y: auto;
+	padding-bottom: var(--total-bottom-height);
 }
 
 .tab-content .tab-pane {
-  width: 100%;
-  align-items: center;
-  justify-content: center;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
 }
 
 .module-grid {
-  padding: 20px;
+	padding: 20px;
 }
 
-.week-navigation, .module-navigation {
-  position: fixed;
-  bottom: calc(var(--nav-height) - 1px);
-  left: 0;
-  right: 0;
-  background-color: var(--malone-light-blue);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 101;
-  height: var(--week-nav-height);
+.week-navigation,
+.module-navigation {
+	position: fixed;
+	bottom: calc(var(--nav-height) - 1px);
+	left: 0;
+	right: 0;
+	background-color: var(--malone-light-blue);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 101;
+	height: var(--week-nav-height);
 }
 
-.week-navigation button, .module-navigation button {
-  background-color: var(--malone-light-blue);
-  color: white;
-  border: none;
-  flex: 1;
-  height: 100%;
-  border-radius: 0;
-  transition: all 0.3s ease;
-  padding: 0 10px;
+.week-navigation button,
+.module-navigation button {
+	background-color: var(--malone-light-blue);
+	color: white;
+	border: none;
+	flex: 1;
+	height: 100%;
+	border-radius: 0;
+	transition: all 0.3s ease;
+	padding: 0 10px;
 }
 
-.week-navigation button:hover, .module-navigation button:hover {
-  background-color: var(--malone-light-blue);
-  color: var(--malone-background-color);
+.week-navigation button:hover,
+.module-navigation button:hover {
+	background-color: var(--malone-light-blue);
+	color: var(--malone-background-color);
 }
 
-.week-navigation span, .module-navigation span {
-  background-color: var(--malone-light-blue);
-  color: var(--malone-background-color);
-  padding: 10px 20px;
-  flex: 1;
-  text-align: center;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.week-navigation span,
+.module-navigation span {
+	background-color: var(--malone-light-blue);
+	color: var(--malone-background-color);
+	padding: 10px 20px;
+	flex: 1;
+	text-align: center;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .module-navigation {
-  display: none;
-  height: 5vh;
+	display: none;
+	height: 5vh;
 }
 
 .icon {
-  display: block;
-  text-align: center;
+	display: block;
+	text-align: center;
 }
 
 .big-nav-icon {
-  font-size: 28px;
+	font-size: 28px;
 }
 
 .small-nav-label {
-  font-size: 12px;
-  padding-top: 1px;
+	font-size: 12px;
+	padding-top: 1px;
 }
 
 h1 {
- background-color: var(--malone-light-blue);
- color: white;
- padding: 10px;
- width: 100%;
- position: sticky;
- top: 0;
- z-index: 10;
- margin: 0px;
+	background-color: var(--malone-light-blue);
+	color: white;
+	padding: 10px;
+	width: 100%;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	margin: 0px;
 }
 
 h2 {
- background-color: var(--malone-light-blue);
- color: white;
- padding: 10px;
- width: 100%;
- position: sticky;
- top: 3.125rem; /* Using rem for better responsiveness */
- z-index: 9;
- font-style: italic;
+	background-color: var(--malone-light-blue);
+	color: white;
+	padding: 10px;
+	width: 100%;
+	position: sticky;
+	top: 3.125rem; /* Using rem for better responsiveness */
+	z-index: 9;
+	font-style: italic;
 }
 
 .form-label {
@@ -178,20 +185,25 @@ h2 {
 	margin: 10px;
 }
 
-p, h3, h4, .card, .search-box {
+p,
+h3,
+h4,
+.card,
+.search-box {
 	margin: 10px;
 }
 
-.card-title, .card-text {
+.card-title,
+.card-text {
 	margin: 0px;
 }
 
 .btn {
 	background-color: var(--malone-light-blue);
-	color: var(--malone-background-color)
+	color: var(--malone-background-color);
 }
 
 .btn:hover {
 	background-color: var(--malone-light-blue);
-	color: var(--malone-background-color)
+	color: var(--malone-background-color);
 }
