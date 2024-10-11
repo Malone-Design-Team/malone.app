@@ -1,4 +1,4 @@
-# John-Paul Witt, Social Worker
+# John-Paul Witt
 
 Medicaid & Private Ins
 
@@ -8,8 +8,8 @@ Suite E
 
 Lincon NE 68506
 
-531.201.1965
+[531.201.1965](tel:5312011965)
 
-Brookhaven Therapy
+[Brookhaven Therapy](https://www.brookhaventherapy.com/#about-section)
 
 ![picture](./markdown/resources/images/jWitt.jpeg)
