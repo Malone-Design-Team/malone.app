@@ -1,5 +1,10 @@
 # Week 5
 ## Your Body Postpartum
-- Between 6 to 12 weeks after birth, contact health care provider for a comprehensive postpartum evaluation (American College of Obstetricians and Gynecologists) 
-    - They will discuss emotional well-being contraception/future pregnancies, infant care/feeding, sleep habits, physical exam 
-    - If you have trouble finding time for an exam, talk to your doctor 
+- Between 6 and 12 weeks after birth, be sure to contact your health care provider for a comprehensive postpartum evaluation.
+- At this evaluation, they will discuss:
+    - Your emotional well-being
+    - Contraception / future pregnancies
+    - Infant care / feeding
+    - Your sleep habits
+- They will also perform a physical exam.
+- If you have trouble finding time for an exam, talk to your doctor.
