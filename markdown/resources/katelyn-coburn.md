@@ -1,4 +1,4 @@
-# Dr. Katelyn Coburn, Social Worker
+# Dr. Katelyn Coburn
 
 Medicaid & Private Ins
 
@@ -8,8 +8,8 @@ Suite 3
 
 Lincoln NE 68516
 
-402.327.1087
+[402.327.1087](tel:4023271087)
 
-Kelly & Associates
+[Kelly & Associates](https://www.kellyandassociatestherapy.com/dr-katelyn-coburn)
 
 ![picture](./markdown/resources/images/kCoburn.jpeg)
