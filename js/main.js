@@ -184,8 +184,24 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	});
 	// resources
 	const resourceFiles = [
-		"./markdown/resources/jane-doe-obgyn.md",
-		`./markdown/resources/adira-orehlian-social-worker.md`,
+		"./markdown/resources/ashlee-reed.md",
+		"./markdown/resources/assel-saparova.md",
+		"./markdown/resources/audrey-hines.md",
+		"./markdown/resources/beatrice-ekwunife.md",
+		"./markdown/resources/carey-kalkwalf.md",
+		"./markdown/resources/dezi-mcevoy.md",
+		"./markdown/resources/hallie-zimmerman.md",
+		"./markdown/resources/jamie-heng.md",
+		"./markdown/resources/jen-brown.md",
+		"./markdown/resources/jennifer-mayeux.md",
+		"./markdown/resources/john-witt.md",
+		"./markdown/resources/kara-evans.md",
+		"./markdown/resources/katelyn-coburn.md",
+		"./markdown/resources/kim-ruiz.md",
+		"./markdown/resources/lorin-kelly.md",
+		"./markdown/resources/makiya-carter.md",
+		"./markdown/resources/mallorie-terry.md",
+		"./markdown/resources/raquel-izaguirre.md",
 	];
 	const resourcesContainer = document.querySelector(".resource-cards");
 
