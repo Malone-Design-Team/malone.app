@@ -1,4 +1,4 @@
-# Beatrice Ekwunife, Social Worker
+# Beatrice Ekwunife
 
 Medicaid and Private Ins
 
@@ -6,8 +6,8 @@ Medicaid and Private Ins
 
 Lincoln NE 68506
 
-402.413.6677
+[402.413.6677](tel:4024136677)
 
-Youniq Health
+[Youniq Health](https://youniqhealth.com/)
 
 ![picture](./markdown/resources/images/bEkwunife.jpeg)
