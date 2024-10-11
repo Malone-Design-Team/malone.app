@@ -10,4 +10,4 @@ Lincoln NE 68506
 
 Youniq Health
 
-![picture](./markdown/resources/images/fake-logo.png)
+![picture](./markdown/resources/images/bEkwunife.jpeg)
