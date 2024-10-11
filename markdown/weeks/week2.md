@@ -9,7 +9,7 @@ Some [1 in 10 mothers](https://www.cdc.gov/reproductivehealth/depression/index.h
 - If you want to screen for anxiety, you could use the **Postpartum Specific Anxiety Scale** [(tap or click here)]().
   - If you score 112 or greater, consider seeking professional help.
   
-- See our list of recommended professionals on the resources tab of this app.
+- Check out our "Resources" tab below for a list of recommended mental health professionals.
   - Check here for more general mental health information: [tap or click here](https://www.postpartum.net/wp-content/uploads/2014/11/EnglishBrochure.pdf)
   - Here is a link to a helpful mindfulness exercise you can try this week! [insert internal link here]()
 
