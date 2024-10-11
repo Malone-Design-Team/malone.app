@@ -1,4 +1,4 @@
-# Jamie Heng, Social Worker
+# Jamie Heng
 
 Medicaid & Private Ins
 
@@ -8,6 +8,6 @@ Suite 5
 
 Lincoln NE 68507
 
-New Outlook Counseling
+[New Outlook Counseling](https://newoutlookcounseling.org/)
 
 ![picture](./markdown/resources/images/jHeng.jpeg)
