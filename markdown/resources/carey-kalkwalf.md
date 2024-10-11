@@ -1,4 +1,4 @@
-# Carey Kalkwalf, Social Worker
+# Carey Kalkwalf
 
 Medicaid & Private Ins
 
@@ -8,8 +8,8 @@ Suite 104
 
 Lincoln NE 68516
 
-402.412.5450
+[402.412.5450](tel:4024125450)
 
-Better Place Counseling
+[Better Place Counseling](https://www.betterplacecounseling.org/)
 
 ![picture](./markdown/resources/images/cKalfwalf.jpeg)
