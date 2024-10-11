@@ -1,4 +1,4 @@
-# Audrey Hines, Social Worker
+# Audrey Hines
 
 Medicaid & BCBS only
 
@@ -8,9 +8,9 @@ Suite 204
 
 Lincoln NE 68506
 
-531.249.2324
+[531.249.2324](tel:5312492324)
 
-Sikhona Therapy
+[Sikhona Therapy](https://sikhonatherapyne.com/audrey-hines/)
 
 ![picture](./markdown/resources/images/aHines.jpeg)
 
