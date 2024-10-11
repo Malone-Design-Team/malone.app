@@ -8,6 +8,6 @@ Suite 5
 
 Lincoln NE 68507
 
-Lincoln Wellness
+[Lincoln Wellness](https://www.lincolnwellnessgroup.com/ashlee-reed/)
 
 ![picture](./markdown/resources/images/aReed.jpeg)
