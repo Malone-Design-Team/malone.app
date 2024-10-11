@@ -1,12 +1,12 @@
-# Assel Saparova, Social Worker
+# Assel Saparova
 
 Medicaid & Private Ins
 
 Telehealth Only
 
-402.430.0209
+402.430.0209(tel:4024300209)
 
-Psychology Today
+[Psychology Today](https://www.psychologytoday.com/us/therapists/assel-saparova-lincoln-ne/422958)
 
 Spanish, Russian & English
 
