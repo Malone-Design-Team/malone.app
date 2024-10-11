@@ -1,4 +1,4 @@
-# Jen Brown, Social Worker
+# Jen Brown
 
 Medicaid & Private Ins
 
@@ -8,8 +8,8 @@ Suite 206
 
 Lincoln NE 68506
 
-531.333.3759
+[531.333.3759](tel:5313333759)
 
-Lincoln Wellness Group
+[Lincoln Wellness Group](https://www.lincolnwellnessgroup.com/jennifer-brown)
 
 ![picture](./markdown/resources/images/jBrown.jpeg)
