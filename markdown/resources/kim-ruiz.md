@@ -1,4 +1,4 @@
-# Kim Ruiz, Social Worker
+# Kim Ruiz
 
 Medicaid & Private Ins
 
@@ -8,9 +8,9 @@ Suite 3
 
 Lincoln NE 68516
 
-402.327.1085
+[402.327.1085](tel:4023271085)
 
-Kelly & Associates
+[Kelly & Associates](https://www.kellyandassociatestherapy.com/kimruiz)
 
 Spanish & English
 
