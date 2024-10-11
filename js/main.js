@@ -1,3 +1,8 @@
+function hideWeekNavigation() {
+	const weekNavigation = document.getElementById("week-navigation");
+	weekNavigation.style.display = "none";
+}
+
 window.onload = () => {
 	"use strict";
 
@@ -11,15 +16,45 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	const tabLinks = document.querySelectorAll(".nav-link");
 	const homeTab = document.getElementById("home-tab");
 
-	function showWeekNavigation() {
-		weekNavigation.style.display = "flex";
+	// Function to handle deep linking
+	function handleDeepLink() {
+		const urlParams = new URLSearchParams(window.location.search);
+		const tab = urlParams.get('tab');
+		const module = urlParams.get('module');
+
+		if (tab) {
+			const tabElement = document.getElementById(`${tab}-tab`);
+			if (tabElement) {
+				tabElement.click();
+			}
+
+			if (tab === 'modules' && module) {
+				const [folder, ...pathParts] = module.split('/');
+				const path = pathParts.join('/');
+
+				hideWeekNavigation();
+				if (path) {
+					loadModuleFile(folder, `/${path}`);
+				} else {
+					loadModuleContents(folder);
+				}
+				updateModuleNavigation(folder, `/${path}`);
+			}
+
+			// Clear the query parameters
+			window.history.replaceState({}, document.title, window.location.pathname);
+		}
 	}
 
-	function hideWeekNavigation() {
-		weekNavigation.style.display = "none";
-	}
+	// Call handleDeepLink on page load
+	handleDeepLink();
 
-	tabLinks.forEach((link) => {
+function showWeekNavigation() {
+	const weekNavigation = document.getElementById("week-navigation");
+	weekNavigation.style.display = "flex";
+}
+
+tabLinks.forEach((link) => {
 		link.addEventListener("click", () => {
 			if (link.id === "home-tab") {
 				showWeekNavigation();
@@ -88,7 +123,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 				const html = marked.parse(markdown);
 				const doc = new DOMParser().parseFromString(html, "text/html");
 				weekContainer.innerHTML = ""; // Clear previous content
-				const card = document.createElement("div");
+				var card = document.createElement("div");
+				card.className = "header-colors";
 				card.append(...doc.body.childNodes);
 				weekContainer.appendChild(card);
 				updateWeekNavigation();
@@ -128,122 +164,92 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	loadWeekContent(currentWeekIndex);
 
 	// FAQ page loader
-	const faqFiles = [
-		"./markdown/faqs/Activity_MH.md",
-		"./markdown/faqs/Baby_Connect.md",
-		"./markdown/faqs/Body_image.md",
-		"./markdown/faqs/Bonding_Time.md",
-		"./markdown/faqs/Breast_mental_health.md",
-		"./markdown/faqs/Feeling_isolated.md",
-		"./markdown/faqs/ImproveSleep.md",
-		"./markdown/faqs/Mixed_Feelings.md",
-		"./markdown/faqs/Mom_Guilt.md",
-		"./markdown/faqs/Overwhelmed.md",
-		"./markdown/faqs/PPDepression.md",
-		"./markdown/faqs/Partner_Support.md",
-		"./markdown/faqs/Physical_Health.md",
-		"./markdown/faqs/Postpartum_resources.md",
-		"./markdown/faqs/Quick_MH_Tip.md",
-		"./markdown/faqs/Relationship_Coping.md",
-		"./markdown/faqs/Safe_Excercise.md",
-		"./markdown/faqs/Seek_health_MH.md",
-		"./markdown/faqs/Self-care.md",
-		"./markdown/faqs/when_can_i_have_sex.md",
-		"./markdown/faqs/will-sex-feel-different.md",
-	];
 	const faqContainer = document.querySelector(".faq-cards");
 
-	faqFiles.forEach((file) => {
-		fetch(file)
-			.then((response) => {
-				if (!response.ok) {
-					throw new Error("HTTP error " + response.status);
-				}
-				return response.text();
-			})
-			.then((markdown) => {
-				const html = marked.parse(markdown);
-				const doc = new DOMParser().parseFromString(html, "text/html");
-				const card = document.createElement("div");
-				const question = doc.getElementsByTagName("h3")[0].innerText;
-				const answer = doc.getElementsByTagName("p")[0].innerText;
-				console.log(question);
-				console.log(answer);
-				card.className = "card mt-2 mb-2";
-				card.innerHTML = `	<div class="card-header">
-	  								<h5 class="text-start p-1">${question}</h5>
-	        						</div>
-	        						<div class="card-body">
-	        							<p class="card-text">${answer}</p>
-	          					</div>`;
-				faqContainer.appendChild(card);
-			})
-			.catch((error) => {
-				console.error("Error loading FAQ:", error);
+	fetch("./markdown/faqs/index.json")
+		.then((response) => response.json())
+		.then((faqFiles) => {
+			faqFiles.forEach((file) => {
+				fetch(`./markdown/faqs/${file.name}`)
+					.then((response) => {
+						if (!response.ok) {
+							throw new Error("HTTP error " + response.status);
+						}
+						return response.text();
+					})
+					.then((markdown) => {
+						const html = marked.parse(markdown);
+						const doc = new DOMParser().parseFromString(html, "text/html");
+						const card = document.createElement("div");
+						const question = doc.getElementsByTagName("h3")[0].innerText;
+						const answer = doc.getElementsByTagName("p")[0].innerText;
+						card.className = "card mt-2 mb-2";
+						card.innerHTML = `	<div class="card-header">
+											<h5 class="text-start p-1">${question}</h5>
+											</div>
+											<div class="card-body">
+												<p class="card-text">${answer}</p>
+											</div>`;
+						faqContainer.appendChild(card);
+					})
+					.catch((error) => {
+						console.error("Error loading FAQ:", error);
+					});
 			});
-	});
+		})
+		.catch((error) => {
+			console.error("Error loading FAQ index:", error);
+		});
+
 	// resources
-	const resourceFiles = [
-		"./markdown/resources/ashlee-reed.md",
-		"./markdown/resources/assel-saparova.md",
-		"./markdown/resources/audrey-hines.md",
-		"./markdown/resources/beatrice-ekwunife.md",
-		"./markdown/resources/carey-kalkwalf.md",
-		"./markdown/resources/dezi-mcevoy.md",
-		"./markdown/resources/hallie-zimmerman.md",
-		"./markdown/resources/jamie-heng.md",
-		"./markdown/resources/jen-brown.md",
-		"./markdown/resources/jennifer-mayeux.md",
-		"./markdown/resources/john-witt.md",
-		"./markdown/resources/kara-evans.md",
-		"./markdown/resources/katelyn-coburn.md",
-		"./markdown/resources/kim-ruiz.md",
-		"./markdown/resources/lorin-kelly.md",
-		"./markdown/resources/makiya-carter.md",
-		"./markdown/resources/mallorie-terry.md",
-		`./markdown/resources/raquel-izaguirre.md`,
-	];
 	const resourcesContainer = document.querySelector(".resource-cards");
 
-	resourceFiles.forEach((file) => {
-		fetch(file)
-			.then((response) => {
-				if (!response.ok) {
-					throw new Error("HTTP error " + response.status);
-				}
-				return response.text();
-			})
-			.then((markdown) => {
-				const html = marked.parse(markdown);
-				const doc = new DOMParser().parseFromString(html, "text/html");
-				const card = document.createElement("div");
-				const title =
-					doc.getElementsByTagName("h1")[0]?.innerText || "No Title";
-				const detailsElements = doc.getElementsByTagName("p");
-				const imageElement = doc.getElementsByTagName("img")[0];
-				let detailsHTML = "";
-				for (let detail of detailsElements) {
-					detailsHTML += `<p class="card-text p-0 m-0">${detail.innerText}</p>`;
-				}
-				card.className = "card d-flex flex-row align-items-center mt-2 mb-2";
-				card.style.maxWidth = "100%";
-				card.style.boxSizing = "border-box";
-				card.innerHTML = `
-             <div style="flex-grow: 1; min-width: 0;">
-               <div class="card-body">
-                 <h3 class="card-title">${title}</h3>
-                 ${detailsHTML}
-               </div>
-             </div>
-             ${imageElement ? `<img src="${imageElement.src}" style="width: 128px; height: auto; object-fit: cover;" class="ml-3" alt="...">` : ""}
-           `;
+	fetch("./markdown/resources/index.json")
+		.then((response) => response.json())
+		.then((resourceFiles) => {
+			resourceFiles.forEach((file) => {
+				fetch(`./markdown/resources/${file.name}`)
+					.then((response) => {
+						if (!response.ok) {
+							throw new Error("HTTP error " + response.status);
+						}
+						return response.text();
+					})
+					.then((markdown) => {
+						const html = marked.parse(markdown);
+						const doc = new DOMParser().parseFromString(html, "text/html");
+						const card = document.createElement("div");
+						const title =
+							doc.getElementsByTagName("h1")[0]?.innerText || "No Title";
+						const detailsElements = doc.getElementsByTagName("p");
+						const imageElement = doc.getElementsByTagName("img")[0];
+						let detailsHTML = "";
+						for (let detail of detailsElements) {
+							detailsHTML += `<p class="card-text p-0 m-0">${detail.innerText}</p>`;
+						}
+						card.className = "card d-flex flex-row align-items-center mt-2 mb-2";
+						card.style.maxWidth = "100%";
+						card.style.boxSizing = "border-box";
+						card.innerHTML = `
+							<div style="flex-grow: 1; min-width: 0;">
+								<div class="card-body">
+									<h3 class="card-title">${title}</h3>
+									${detailsHTML}
+								</div>
+							</div>
+							${imageElement ? `<img src="${imageElement.src}" style="width: 128px; height: auto; object-fit: cover;" class="ml-3" alt="...">` : ""}
+						`;
 
-				resourcesContainer.appendChild(card);
-			})
-			.catch((error) => {
-				console.error("Error loading resources:", error);
+						resourcesContainer.appendChild(card);
+					})
+					.catch((error) => {
+						console.error("Error loading resources:", error);
+					});
 			});
-	});
+		})
+		.catch((error) => {
+			console.error("Error loading resources index:", error);
+		});
 	// settings
 	const settingsForm = document.getElementById("settings-form");
 	const expectedDayInput = document.getElementById("expected-day");
@@ -337,6 +343,8 @@ function loadModuleContents(folder, path = "") {
 	const modulesContainer = document.querySelector("#modules-content");
 	const folderPath = `./markdown/modules/${folder}${path}`;
 
+	hideWeekNavigation();
+
 	// Fetch the list of files and folders in the current directory
 	fetch(`${folderPath}/index.json`)
 		.then((response) => response.json())
@@ -400,6 +408,8 @@ function loadModuleFile(folder, filePath) {
 	const modulesContainer = document.querySelector("#modules-content");
 	const fullPath = `./markdown/modules/${folder}${filePath}`;
 
+	hideWeekNavigation();
+
 	// First, check if the path is a file
 	fetch(fullPath)
 		.then((response) => {
@@ -416,6 +426,7 @@ function loadModuleFile(folder, filePath) {
 
 					// Hide the modules title when viewing an article
 					document.querySelector("#modules h1").style.display = "none";
+					updateModuleNavigation(folder, filePath);
 				});
 			} else {
 				// If it's not a file, check if it's a directory

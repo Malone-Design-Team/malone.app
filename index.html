@@ -22,7 +22,7 @@
 <body class="fullscreen">
   <div class="tab-content">
     <div class="container tab-pane active" id="home" role="tabpanel">
-      <div id="home-content">
+      <div class="home-content" id="home-content">
       </div>
     </div>
     <div class="container tab-pane" id="modules" role="tabpanel">
@@ -110,27 +110,36 @@
     <span id="moduleIndicator">Module</span>
   </div>
   <nav class="nav nav-pills nav-fill floatingTab">
-    <a class="nav-item nav-link rounded-0 active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab">
+    <a class="nav-item nav-link rounded-0 active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" onclick="updateUrl('home')">
       <span class="big-nav-icon fas fa-home icon"></span>
       <span class="small-nav-label">Home</span>
     </a>
-    <a class="nav-item nav-link rounded-0" id="modules-tab" data-bs-toggle="tab" href="#modules" role="tab">
+    <a class="nav-item nav-link rounded-0" id="modules-tab" data-bs-toggle="tab" href="#modules" role="tab" onclick="updateUrl('modules')">
       <span class="big-nav-icon fas fa-cubes icon"></span>
       <span class="small-nav-label">Modules</span>
     </a>
-    <a class="nav-item nav-link rounded-0" id="faq-tab" data-bs-toggle="tab" href="#faq" role="tab">
+    <a class="nav-item nav-link rounded-0" id="faq-tab" data-bs-toggle="tab" href="#faq" role="tab" onclick="updateUrl('faq')">
       <span class="big-nav-icon fas fa-question-circle icon"></span>
       <span class="small-nav-label">FAQ</span>
     </a>
-    <a class="nav-item nav-link rounded-0" id="resources-tab" data-bs-toggle="tab" href="#resources" role="tab">
+    <a class="nav-item nav-link rounded-0" id="resources-tab" data-bs-toggle="tab" href="#resources" role="tab" onclick="updateUrl('resources')">
       <span class="big-nav-icon fas fa-book icon"></span>
       <span class="small-nav-label">Resources</span>
     </a>
-    <a class="nav-item nav-link rounded-0" id="settings-tab" data-bs-toggle="tab" href="#settings" role="tab">
+    <a class="nav-item nav-link rounded-0" id="settings-tab" data-bs-toggle="tab" href="#settings" role="tab" onclick="updateUrl('settings')">
       <span class="big-nav-icon fas fa-cog icon"></span>
       <span class="small-nav-label">Settings</span>
     </a>
   </nav>
   <script src="js/main.js"></script>
+  <script>
+    function updateUrl(tab, module = '') {
+      let url = `?tab=${tab}`;
+      if (tab === 'modules' && module) {
+        url += `&module=${module}`;
+      }
+      window.history.pushState({}, '', url);
+    }
+  </script>
 </body>
 </html>

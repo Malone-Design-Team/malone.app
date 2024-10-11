@@ -9,6 +9,12 @@
 		var(--nav-height) + (var(--week-nav-height) * var(--week-nav-visible)) +
 			var(--safe-area-inset-bottom)
 	);
+
+	/* section colors */
+	--section-1-color: #003388;
+	--section-2-color: #7bdcb5;
+	--section-3-color: #0693e3;
+	--section-4-color: #9b51e0;
 }
 
 body {
@@ -172,6 +178,37 @@ h2 {
 	font-style: italic;
 }
 
+.header-colors {
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: white;
+		padding: 10px;
+		width: 100%;
+		position: sticky;
+		top: 3.125rem; /* Using rem for better responsiveness */
+		z-index: 9;
+		font-style: italic;
+	}
+	h3 {
+		background-color: var(--section-1-color);
+		font-size: 2rem; /* Same size as h2 */
+	}
+	h4 {
+		background-color: var(--section-2-color);
+		font-size: 2rem; /* Same size as h2 */
+	}
+	h5 {
+		background-color: var(--section-3-color);
+		font-size: 2rem; /* Same size as h2 */
+	}
+	h6 {
+		background-color: var(--section-4-color);
+		font-size: 2rem; /* Same size as h2 */
+	}
+}
+
 .form-label {
 	font-weight: bold;
 }
@@ -181,8 +218,6 @@ h2 {
 }
 
 p,
-h3,
-h4,
 .card,
 .search-box {
 	margin: 10px;
