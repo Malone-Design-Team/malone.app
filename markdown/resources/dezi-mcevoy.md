@@ -1,4 +1,4 @@
-# Dezi McEvoy, Social Worker
+# Dezi McEvoy
 
 Medicaid & Private Ins
 
@@ -8,6 +8,6 @@ Suite 5
 
 Lincoln NE 68507
 
-Holistic Healing
+[Holistic Healing](https://holistichealing-counseling.com/)
 
 ![picture](./markdown/resources/images/dMcevoy.jpeg)
