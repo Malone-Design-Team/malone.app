@@ -1,4 +1,4 @@
-# Ashlee Reed, Social Worker
+# Ashlee Reed
 
 Private Ins only
 
