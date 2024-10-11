@@ -27,3 +27,5 @@ Again, this is normal right after having a child, whether they're your first or 
 - Try to be open with your partner about how you're feeling and what you need from them. Encourage them to do the same with you.
 - Remember, this is a new experience for you and your partner. The more you can share where you're at mentally, the easier it will be to find common ground.
 - Make sure to talk about any struggles you're having so you can work through them together.
+
+![A couple and their baby](/images/couple_and_baby/family_stand.jpg)
