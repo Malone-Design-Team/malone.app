@@ -5,6 +5,7 @@ Some [1 in 10 mothers](https://www.cdc.gov/reproductivehealth/depression/index.h
 A good resource to screen for depression is the **Edinburgh Postnatal Depression Scale** [(tap or click here)](http://www.perinatalservicesbc.ca/Documents/Resources/HealthPromotion/EPDS/EPDSScoringGuide_March2015.pdf).
 - Print and fill out this document as a way to check in with yourself.
 - If you score 12 to 13 or above, consider seeking professional help.
+  
 If you want to screen for anxiety, you could use the **Postpartum Specific Anxiety Scale** [(tap or click here)]().
 - If you score 112 or greater, consider seeking professional help.
 See our list of recommended professionals on the resources tab of this app.
