@@ -13,7 +13,7 @@ You should contact your health care provider in the next 3 weeks to talk about y
     - They can be black, blue, purple, pink, red, or discolored streaks.
     - They don’t need treatment and *fade over time* on their own.
 
-![alt-text](/images/bjorn_and_breast_pump/bjorn_close1.jpg)
+![Woman talking on phone while using breast pump](/images/bjorn_and_breast_pump/pump_phone_call.jpg)
 
 ### Your Mental Health
 - At least 10% of people struggle with depression and anxiety after giving birth (postpartum mood disorders). Keep an eye out for this—it's normal and nothing to be ashamed of.
