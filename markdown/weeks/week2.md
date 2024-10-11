@@ -27,6 +27,5 @@ Again, this is normal right after having a child, whether they're your first or 
   - Maybe they can watch your child for an hour or two to give you some time to yourself, or they can stop by to help with dinner one night.
   - Sometimes having a little help outside of your household can make things run smoother inside it.
 - Try to be open with your partner about how you're feeling and what you need from them. Encourage them to do the same with you.
-- Remember, this is a new experience for you and your partner.
-- The more you can share where you're at mentally, the easier it will be to find common ground.
+- Remember, this is a new experience for you and your partner. The more you can share where you're at mentally, the easier it will be to find common ground.
 - Make sure to talk about any struggles you're having so you can work through them together.
