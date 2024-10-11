@@ -15,7 +15,7 @@ Being a new parent is hard, and sometimes it can help to take a few steps back a
 * Exhale completely through your mouth, making a whoosh sound to a count of eight. 
 * This is one breath. Now inhale again and repeat the cycle three more times for a total of four breaths.
 
-![Mindfulness Photo](https://unsplash.com/photos/water-ripple-dOhJtfXJZfw)
+![Mindfullness Photo](/markdown/weeks/images/levi-xu-water-drop-unsplash.jpg)
 
 ## Finding Social Support
 The most significant drop in relationship satisfaction is in the first 6 months of the postpartum period, aka right now. This is a normal part of having a new child, and it does not just happen for first time parents. There's usually a few reasons for this drop in satisfaction:
