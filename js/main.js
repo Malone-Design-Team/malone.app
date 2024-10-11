@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		"./markdown/resources/lorin-kelly.md",
 		"./markdown/resources/makiya-carter.md",
 		"./markdown/resources/mallorie-terry.md",
-		"./markdown/resources/raquel-izaguirre.md",
+		`./markdown/resources/raquel-izaguirre.md`,
 	];
 	const resourcesContainer = document.querySelector(".resource-cards");
 
