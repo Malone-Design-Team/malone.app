@@ -30,6 +30,7 @@ You should contact your health care provider in the next 3 weeks to talk about y
 
 # Header Levels
 [testing a deeplink](?tab=modules&module=exercise/short-example.md)
+[another deeplink](?tab=faq)
 ### Three Pound Signs
 #### Four Pound Signs
 ##### Five Pound Signs
