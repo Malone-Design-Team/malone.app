@@ -7,4 +7,6 @@
 * Exhale completely through your mouth, making a whoosh sound to a count of eight. 
 * This is one breath. Now inhale again and repeat the cycle three more times for a total of four breaths. 
 
-The exact breathing times aren’t important. The 4:7:8 ratio is what matters. 
+The exact breathing times aren’t important. The 4:7:8 ratio is what matters.
+
+![Mindfullness Photo](/markdown/weeks/images/levi-xu-water-drop-unsplash.jpg)

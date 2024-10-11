@@ -12,4 +12,4 @@ Lincoln NE 68506
 
 Spanish & English
 
-![picture](./markdown/resources/images/fake-logo.png)
+![picture](./markdown/resources/images/rIzaguirre.jpeg)

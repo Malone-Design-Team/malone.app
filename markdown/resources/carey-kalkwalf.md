@@ -10,4 +10,4 @@ Lincoln NE 68516
 
 Better Place Counseling
 
-![picture](./markdown/resources/images/fake-logo.png)
+![picture](./markdown/resources/images/cKalfwalf.jpeg)
