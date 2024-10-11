@@ -1,4 +1,4 @@
-# Raquel Moreno Izaguirre, Social Worker
+# Raquel Moreno Izaguirre
 
 Medicaid & Private Ins
 
@@ -8,7 +8,7 @@ Suite 202
 
 Lincoln NE 68506
 
-402.413.9758
+[402.413.9758](tel:4024139758)
 
 Spanish & English
 
