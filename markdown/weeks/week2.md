@@ -6,16 +6,9 @@ A good resource to screen for depression is the **Edinburgh Postnatal Depression
 
 Check here for more general mental health information: [tap or click here](https://www.postpartum.net/wp-content/uploads/2014/11/EnglishBrochure.pdf)
 
-## Mindfulness Exercises
-Being a new parent is hard, and sometimes it can help to take a few steps back and breathe. Try this 4-7-8 breathing exercise to help you stay in the moment and get a few moments to relax. Note: the exact breathing times aren't important - the 4:7:8 ratio is what matters the most.
-* Place the tip of your tongue against the ridge of tissue just behind your upper front teeth, and keep it there through the entire exercise. You will be exhaling through your mouth around your tongue; try pursing your lips slightly if this seems awkward. 
-* Exhale completely through your mouth, making a whoosh sound. 
-* Close your mouth and inhale quietly through your nose to a mental count of four. 
-* Hold your breath for a count of seven. 
-* Exhale completely through your mouth, making a whoosh sound to a count of eight. 
-* This is one breath. Now inhale again and repeat the cycle three more times for a total of four breaths.
+Here is a link to a helpful mindfulness exercise you can try this week! [insert internal link here]()
 
-![Mindfullness Photo](/markdown/weeks/images/levi-xu-water-drop-unsplash.jpg)
+![Mindfullness Photo](/markdown/weeks/images/Mindfulness-Yoga-Photo.jpg)
 
 ## Finding Social Support
 The most significant drop in relationship satisfaction is in the first 6 months of the postpartum period, aka right now. This is a normal part of having a new child, and it does not just happen for first time parents. There's usually a few reasons for this drop in satisfaction:
