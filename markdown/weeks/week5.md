@@ -8,3 +8,5 @@
     - Your sleep habits
 - They will also perform a physical exam.
 - If you have trouble finding time for an exam, talk to your doctor.
+
+![A group of women and children sitting on a porch](/images/sabrina_rains_motherhood_session/mothers_and_children_on_porch.jpg)
