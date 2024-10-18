@@ -8,4 +8,4 @@ The CDC recommends moderate-intestity physical activities for the first year aft
 - bike riding
 - yoga
 
-Doing these activities with a group can make them more enjoyable and social activies are beneficial to your mental health.
+Doing these activities with a group can make them more enjoyable and social activies are beneficial to your mental health!
