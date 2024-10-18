@@ -8,3 +8,5 @@ A: Connection can grow over time. It's okay if you don't feel a deep connection 
 - Pick up and soothe your baby when they cry. You can't spoil a newborn.
 
 Don't feel guilty if you don't immediately feel a close connection during these activites. The first few weeks after giving birth can bring a lot of stress, sadness, or anger. These feeling can make bonding more difficult, but it will likely become easier as they pass. Try talking to friends and family members. If you're still concerned about difficulties connecting to your baby, talk to a doula, doctor, or other health professional.
+
+![Woman kisses baby](/images/woman_in_purple/baby_kiss.jpg)
