@@ -1,6 +1,6 @@
 ### Q: What should I do if I’m struggling to connect with my baby? 
 
-A: Connection can grow over time. It's okay if you don't feel a deep connection with your baby right away. It's normal for a bond to develop gradually over the first year of your baby's life. Here are some ways to bond with your baby **[link to source: https://www.acog.org/womens-health/experts-and-stories/the-latest/bonding-with-your-newborn-heres-what-to-know-if-you-dont-feel-connected-right-away]**:
+A: Connection can grow over time. It's okay if you don't feel a deep connection with your baby right away. It's normal for a bond to develop gradually over the first year of your baby's life. Here are some [ways to bond with your baby](https://www.acog.org/womens-health/experts-and-stories/the-latest/bonding-with-your-newborn-heres-what-to-know-if-you-dont-feel-connected-right-away):
 
 - Have skin-to-skin contact with your baby. Touch or stroke their skin.
 - If you breastfeed, this can help make time to touch and hold your baby.
