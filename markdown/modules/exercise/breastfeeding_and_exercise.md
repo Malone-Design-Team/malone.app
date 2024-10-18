@@ -1,6 +1,8 @@
 ### How does exercise effect breastfeeding?
 
-According to the Mayo Clinic, exercise won't effect how much much milk you produce or its quality. If you do exercise while breastfeeding, make sure to drink plenty of water to stay hydrated.
+According to the Mayo Clinic, exercise won't effect how much much milk you produce or its quality.
+
+If you do exercise while breastfeeding, make sure to drink plenty of water to stay hydrated. Wear a supportive bra and nursing pads in case your breasts leak.
 
 It's possible that high-intensity exercise could cause a buildup of lactic acid in breast milk. This acid has a sour taste that your baby may not like. However, this is rare.
 
