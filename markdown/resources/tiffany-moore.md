@@ -6,16 +6,6 @@ Location: 11414 West Center Road Suite 348 Omaha, NE 68144
 
 Specialty: Past trauma, depression, anxiety, mood disorders, stress management
 
-Insurance:
-   - Aetna 
-   - Anthem
-   - BlueCross & BlueShield
-   - Cigna 
-   - Medica
-   - Medicare
-   - Nebraska Total Care
-   - Optum 
-   - UMR 
-   - United Healthcare
+Insurance: Aetna, Anthem, BlueCross & BlueShield, Cigna, Medica, Medicare, Nebraska Total Care, Optum, UMR, United Healthcare
 
 ![picture](./markdown/resources/images/tMoore.jpeg)
