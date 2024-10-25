@@ -12,4 +12,4 @@ Lincoln NE 68516
 
 [Better Place Counseling](https://www.betterplacecounseling.org/)
 
-![picture](./markdown/resources/images/cKalfwalf.jpeg)
+![picture](./markdown/resources/images/cKalkwalf.jpeg)
