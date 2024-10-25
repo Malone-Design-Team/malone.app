@@ -2,7 +2,7 @@
 	--malone-dark-blue: rgb(26, 65, 104);
 	--malone-light-blue: rgb(83, 77, 153);
 	--malone-background-color: rgb(252, 241, 235);
-	--nav-height: 90px;
+	--nav-height: 80px;
 	--week-nav-height: 40px;
 	--safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
 	--total-bottom-height: calc(
