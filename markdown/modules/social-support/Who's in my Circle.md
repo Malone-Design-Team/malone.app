@@ -1,4 +1,4 @@
-### Who's in my Circle?
+# Who's in my Circle?
 
 Caring for a new child can be a lot, and it's easy to forget to take care of yourself. Don't forget that there are always people that can help you through this experience.This is an activity to help you identify some of those people that you can reach out when you need help with the little things, after a paricularly bad day, or any time you just need an outlet and some extra support. Take a few minutes to think about the following questions or write down some of the thoughts that come to mind if that helps you. You can always come back to this activity, or where you might have written it down to remind yourself of your circle of support.
 
