@@ -1,4 +1,4 @@
-### Garlic Chicken Fried Chicken
+# Garlic Chicken Fried Chicken
 
 ![picture](/markdown/modules/nutrition/recipes/images/Garlic_chicken.png)
 
