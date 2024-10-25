@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	// Function to handle deep linking
 	function handleDeepLink() {
 		const urlParams = new URLSearchParams(window.location.search);
-		const tab = urlParams.get('tab');
-		const module = urlParams.get('module');
+		const tab = urlParams.get("tab");
+		const module = urlParams.get("module");
 
 		if (tab) {
 			const tabElement = document.getElementById(`${tab}-tab`);
@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 				tabElement.click();
 			}
 
-			if (tab === 'modules' && module) {
-				const [folder, ...pathParts] = module.split('/');
-				const path = pathParts.join('/');
+			if (tab === "modules" && module) {
+				const [folder, ...pathParts] = module.split("/");
+				const path = pathParts.join("/");
 
 				hideWeekNavigation();
 				if (path) {
@@ -49,12 +49,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	// Call handleDeepLink on page load
 	handleDeepLink();
 
-function showWeekNavigation() {
-	const weekNavigation = document.getElementById("week-navigation");
-	weekNavigation.style.display = "flex";
-}
+	function showWeekNavigation() {
+		const weekNavigation = document.getElementById("week-navigation");
+		weekNavigation.style.display = "flex";
+	}
 
-tabLinks.forEach((link) => {
+	tabLinks.forEach((link) => {
 		link.addEventListener("click", () => {
 			if (link.id === "home-tab") {
 				showWeekNavigation();
@@ -227,7 +227,8 @@ tabLinks.forEach((link) => {
 						for (let detail of detailsElements) {
 							detailsHTML += `<p class="card-text p-0 m-0">${detail.innerText}</p>`;
 						}
-						card.className = "card d-flex flex-row align-items-center mt-2 mb-2";
+						card.className =
+							"card d-flex flex-row align-items-center mt-2 mb-2";
 						card.style.maxWidth = "100%";
 						card.style.boxSizing = "border-box";
 						card.innerHTML = `
@@ -302,6 +303,7 @@ function loadModules() {
 		{ name: "Nutrition", folder: "nutrition" },
 		{ name: "Sexual Health", folder: "sexual-health" },
 		{ name: "Social Support", folder: "social-support" },
+		{ name: "Extra Resources", folder: "extra-resources" },
 	];
 
 	const grid = document.createElement("div");
