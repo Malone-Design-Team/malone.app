@@ -1,6 +1,6 @@
 # Week 1
 ## What should I expect postpartum?
-You should contact your health care provider in the next 3 weeks to talk about your postpartum health. Like pregnancy, postpartum can affect many parts of the body. Some symptoms are expected, but you should contact your doctor if they are severe **[link to common pregnancy-related complications]**. Here's what to expect and when to be concerned:
+You should contact your health care provider in the next 3 weeks to talk about your postpartum health. Like pregnancy, postpartum can affect many parts of the body. Some symptoms are expected, but you should contact your doctor if they are severe [Tap here to learn about common pregnancy-related complications.](https://www.hopkinsmedicine.org/health/conditions-and-diseases/staying-healthy-during-pregnancy/complications-of-pregnancy) Here's what to expect and when to be concerned:
 - *Vaginal soreness* is common after a vaginal delivery.
 - You may feel *contractions* (called afterpains) for a few days after delivery. They are common during breastfeeding.
 - *Vaginal bleeding* will be heavy and bright red for the first few days. It will slowly get darker and more watery.
