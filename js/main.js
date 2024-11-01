@@ -122,6 +122,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 			.then((markdown) => {
 				const html = marked.parse(markdown);
 				const doc = new DOMParser().parseFromString(html, "text/html");
+				// find the first header in the doc and give it the class "week-title" and leave other headers alone
+				const headers = doc.querySelectorAll("h1");
+				headers[0].classList.add("week-title");
 				weekContainer.innerHTML = ""; // Clear previous content
 				var card = document.createElement("div");
 				card.className = "header-colors";
@@ -165,12 +168,42 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 	// FAQ page loader
 	const faqContainer = document.querySelector(".faq-cards");
+	const faqSearchInput = document.getElementById("faq-search");
+	const faqCountElement = document.getElementById("faq-count");
+	let faqCards = [];
+
+	function updateFAQCount(filteredCount) {
+		const totalCount = faqCards.length;
+		if (filteredCount === totalCount) {
+			faqCountElement.textContent = `Showing all ${totalCount} questions`;
+		} else {
+			faqCountElement.textContent = `Showing ${filteredCount} of ${totalCount} questions`;
+		}
+	}
+
+	function filterFAQs(searchTerm) {
+		let visibleCount = 0;
+		faqCards.forEach((card) => {
+			const cardText = card.textContent.toLowerCase();
+			if (cardText.includes(searchTerm.toLowerCase())) {
+				card.style.display = "block";
+				visibleCount++;
+			} else {
+				card.style.display = "none";
+			}
+		});
+		updateFAQCount(visibleCount);
+	}
+
+	faqSearchInput.addEventListener("input", (e) => {
+		filterFAQs(e.target.value);
+	});
 
 	fetch("./markdown/faqs/index.json")
 		.then((response) => response.json())
 		.then((faqFiles) => {
-			faqFiles.forEach((file) => {
-				fetch(`./markdown/faqs/${file.name}`)
+			const loadPromises = faqFiles.map((file) => {
+				return fetch(`./markdown/faqs/${file.name}`)
 					.then((response) => {
 						if (!response.ok) {
 							throw new Error("HTTP error " + response.status);
@@ -181,20 +214,29 @@ document.addEventListener("DOMContentLoaded", (event) => {
 						const html = marked.parse(markdown);
 						const doc = new DOMParser().parseFromString(html, "text/html");
 						const card = document.createElement("div");
-						const question = doc.getElementsByTagName("h3")[0].innerText;
-						const answer = doc.getElementsByTagName("p")[0].innerText;
+						const question = doc.querySelector("h3").innerText;
+						const answerElements = Array.from(doc.body.children).filter(
+							(el) => el.tagName !== "H3",
+						);
+						const answer = answerElements.map((el) => el.outerHTML).join("");
 						card.className = "card mt-2 mb-2";
 						card.innerHTML = `	<div class="card-header">
 											<h5 class="text-start p-1">${question}</h5>
 											</div>
 											<div class="card-body">
-												<p class="card-text">${answer}</p>
+												${answer}
 											</div>`;
 						faqContainer.appendChild(card);
+						faqCards.push(card);
 					})
 					.catch((error) => {
 						console.error("Error loading FAQ:", error);
 					});
+			});
+
+			Promise.all(loadPromises).then(() => {
+				// Initialize FAQ count after all FAQs are loaded
+				updateFAQCount(faqCards.length);
 			});
 		})
 		.catch((error) => {
@@ -203,12 +245,44 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 	// resources
 	const resourcesContainer = document.querySelector(".resource-cards");
+	const resourceSearchInput = document.getElementById("resource-search");
+	const resourceCountElement = document.getElementById("resource-count");
+	let resourceCards = [];
+
+	function updateResourceCount(filteredCount) {
+		const totalCount = resourceCards.length;
+		if (filteredCount === totalCount) {
+			resourceCountElement.textContent = `Showing all ${totalCount} resources`;
+		} else {
+			resourceCountElement.textContent = `Showing ${filteredCount} of ${totalCount} resources`;
+		}
+	}
+
+	function filterResources(searchTerm) {
+		let visibleCount = 0;
+		resourceCards.forEach((card) => {
+			const cardText = card.textContent.toLowerCase();
+			if (cardText.includes(searchTerm.toLowerCase())) {
+				card.style.display = "block";
+				card.classList.add("d-flex");
+				visibleCount++;
+			} else {
+				card.style.display = "none";
+				card.classList.remove("d-flex");
+			}
+		});
+		updateResourceCount(visibleCount);
+	}
+
+	resourceSearchInput.addEventListener("input", (e) => {
+		filterResources(e.target.value);
+	});
 
 	fetch("./markdown/resources/index.json")
 		.then((response) => response.json())
 		.then((resourceFiles) => {
-			resourceFiles.forEach((file) => {
-				fetch(`./markdown/resources/${file.name}`)
+			const loadPromises = resourceFiles.map((file) => {
+				return fetch(`./markdown/resources/${file.name}`)
 					.then((response) => {
 						if (!response.ok) {
 							throw new Error("HTTP error " + response.status);
@@ -242,10 +316,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
 						`;
 
 						resourcesContainer.appendChild(card);
+						resourceCards.push(card);
 					})
 					.catch((error) => {
 						console.error("Error loading resources:", error);
 					});
+			});
+
+			Promise.all(loadPromises).then(() => {
+				// Initialize resource count after all resources are loaded
+				updateResourceCount(resourceCards.length);
 			});
 		})
 		.catch((error) => {

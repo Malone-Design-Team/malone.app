@@ -64,6 +64,10 @@ body {
 	display: block;
 }
 
+.week-title {
+	font-size: 2rem;
+}
+
 .tab-content .tab-pane {
 	margin-bottom: 150px;
 }
@@ -156,7 +160,12 @@ nav {
 	padding-top: 1px;
 }
 
-h1 {
+h1,
+h2,
+.header-colors h3,
+.header-colors h4,
+.header-colors h5,
+.header-colors h6 {
 	background-color: var(--malone-light-blue);
 	color: white;
 	padding: 10px;
@@ -165,48 +174,37 @@ h1 {
 	top: 0;
 	z-index: 10;
 	margin: 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: clamp(1rem, 6vw, 2rem);
+	line-height: 1.2;
+	height: 3.125rem; /* Fixed height for all headers */
+	display: flex;
+	align-items: center;
 }
 
-h2 {
-	background-color: var(--malone-light-blue);
-	color: white;
-	padding: 10px;
-	width: 100%;
-	position: sticky;
-	top: 3.125rem; /* Using rem for better responsiveness */
+h2,
+.header-colors h3,
+.header-colors h4,
+.header-colors h5,
+.header-colors h6 {
+	top: 3.125rem;
 	z-index: 9;
 	font-style: italic;
 }
 
-.header-colors {
-	h3,
-	h4,
-	h5,
-	h6 {
-		color: white;
-		padding: 10px;
-		width: 100%;
-		position: sticky;
-		top: 3.125rem; /* Using rem for better responsiveness */
-		z-index: 9;
-		font-style: italic;
-	}
-	h3 {
-		background-color: var(--section-1-color);
-		font-size: 2rem; /* Same size as h2 */
-	}
-	h4 {
-		background-color: var(--section-2-color);
-		font-size: 2rem; /* Same size as h2 */
-	}
-	h5 {
-		background-color: var(--section-3-color);
-		font-size: 2rem; /* Same size as h2 */
-	}
-	h6 {
-		background-color: var(--section-4-color);
-		font-size: 2rem; /* Same size as h2 */
-	}
+.header-colors h3 {
+	background-color: var(--section-1-color);
+}
+.header-colors h4 {
+	background-color: var(--section-2-color);
+}
+.header-colors h5 {
+	background-color: var(--section-3-color);
+}
+.header-colors h6 {
+	background-color: var(--section-4-color);
 }
 
 .form-label {
