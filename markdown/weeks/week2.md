@@ -29,3 +29,11 @@ Again, this is normal right after having a child, whether they're your first or 
 - Make sure to talk about any struggles you're having so you can work through them together.
 
 ![A couple and their baby](/images/couple_and_baby/family_stand.jpg)
+
+## Nutrition
+- Creating balanced meals is vital for recovery and overall health. Focus on incorporating a variety of food groups, including fruits, vegetables, whole grains, lean proteins, and healthy fats.
+- Aim for colorful plates to ensure you’re getting a range of vitamins and minerals. Foods like quinoa, leafy greens, berries, nuts, and fatty fish can significantly boost your nutrient intake, providing the energy and nutrients necessary for healing and breastfeeding.
+
+[Click here to learn more](https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/in-depth/breastfeeding-nutrition/art-20046912)
+
+## Weekly Recipe

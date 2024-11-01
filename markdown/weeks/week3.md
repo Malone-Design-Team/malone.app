@@ -9,3 +9,11 @@
 - Would you like to connect with a BIPOC female therapist in Omaha? Here are some options and their contact information! *[insert link to therapist information]*
 
 ![Woman holding baby in a milk bath](/images/sabrina_rains_motherhood_session/milk_bath_holding_baby.jpg)
+
+## Nutrition
+- Eating smaller, more frequent meals can help manage hunger and maintain energy throughout the day. Keep healthy snacks on hand—think yogurt, fruits, nuts, or whole-grain crackers—to fuel your body when needed. 
+- This approach not only stabilizes blood sugar levels but also helps prevent fatigue, allowing you to better cope with the demands of motherhood.
+
+[Click here to learn more](https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/in-depth/breastfeeding-nutrition/art-20046912)
+
+## Weekly Recipe
