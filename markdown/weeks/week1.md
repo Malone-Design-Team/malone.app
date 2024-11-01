@@ -32,6 +32,8 @@ You should contact your health care provider in the next 3 weeks to talk about y
 - Proper hydration not only supports milk production but also helps maintain energy levels during those demanding early days with a newborn. 
 - Incorporate herbal teas or infused water with fruits for added flavor and variety. Listening to your body’s thirst cues is key; drink when you're thirsty to keep your fluid levels optimal.
 
+[Click here to learn more](https://www.nebraskamed.com/womens-health/pregnancy-birth/postnatal-vitamins-and-postpartum-nutrition-6-tips-for-breastfeeding-moms)
+
 ## Weekly Recipe
 Garlic Chicken Fried Chicken
 ![picture](/markdown/modules/nutrition/recipes/images/Garlic_chicken.png)
