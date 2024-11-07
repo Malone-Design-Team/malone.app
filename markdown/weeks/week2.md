@@ -2,14 +2,14 @@
 ## Mental Health
 Some [1 in 10 mothers](https://www.cdc.gov/reproductivehealth/depression/index.htm) experience postpartum mood disorders such as anxiety or depression. It is normal. This section includes resources on postpartum mood disorders and how to screen for them. There is no one perfect way to detect postpartum mood disorders.
 
-- A good resource to screen for depression is the **Edinburgh Postnatal Depression Scale** [(tap or click here)](http://www.perinatalservicesbc.ca/Documents/Resources/HealthPromotion/EPDS/EPDSScoringGuide_March2015.pdf).
+- A good resource to screen for depression is the **Edinburgh Postnatal Depression Scale** [(tap or click here)](/markdown/weeks/pdf/EPDSQuestionnaireApril2013.pdf).
   - Print and fill out this document as a way to check in with yourself.
   - If you score 12 to 13 or above, consider seeking professional help.
 - If you want to screen for anxiety, you could use the **Postpartum Specific Anxiety Scale** [(tap or click here)]().
   - If you score 112 or greater, consider seeking professional help.
 - Check out our "Resources" tab below for a list of recommended mental health professionals.
-  - Check here for more general mental health information: [tap or click here](https://www.postpartum.net/wp-content/uploads/2014/11/EnglishBrochure.pdf)
-  - Here is a link to a helpful mindfulness exercise you can try this week! [insert internal link here]()
+  - Check here for more general mental health information: [tap or click here](/markdown/weeks/pdf/EnglishBrochure.pdf)
+  - Here is a link to a helpful mindfulness exercise you can try this week! [insert internal link here](?tab=modules&module=mindfulness/4-7-8-or-Relaxing-Breath-Breathing-Exercise.md)
 
 ![Mindfullness Photo](/markdown/weeks/images/Mindfulness-Yoga-Photo.jpg)
 
@@ -29,3 +29,11 @@ Again, this is normal right after having a child, whether they're your first or 
 - Make sure to talk about any struggles you're having so you can work through them together.
 
 ![A couple and their baby](/images/couple_and_baby/family_stand.jpg)
+
+## Nutrition
+- Creating balanced meals is vital for recovery and overall health. Focus on incorporating a variety of food groups, including fruits, vegetables, whole grains, lean proteins, and healthy fats.
+- Aim for colorful plates to ensure you’re getting a range of vitamins and minerals. Foods like quinoa, leafy greens, berries, nuts, and fatty fish can significantly boost your nutrient intake, providing the energy and nutrients necessary for healing and breastfeeding.
+
+[Click here to learn more](https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/in-depth/breastfeeding-nutrition/art-20046912)
+
+## Weekly Recipe

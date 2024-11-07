@@ -1,4 +1,4 @@
-### How does exercise effect breastfeeding?
+# How does exercise effect breastfeeding?
 
 According to the Mayo Clinic, exercise won't effect how much much milk you produce or its quality.
 

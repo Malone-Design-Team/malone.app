@@ -6,18 +6,6 @@ Location: Creative Counseling and Studio (1941 S. 42nd St. Suite 542 Omaha, NE 6
 
 Specialty: Trauma, PTSD, anxiety, racial identity, daily living stress 
 
-Insurance 
-   - Aetna 
-   - BlueCross & BlueShield 
-   - Bright HealthCare 
-   - Cigna and Evernorth 
-   - Medica 
-   - Medicaid 
-   - Midlands Choice 
-   - Nebraska Bright Health Care 
-   - Optum 
-   - UMR  
-   - United Healthcare  
-   - Out of Network
+Insurance: Aetna, BlueCross & BlueShield, Bright HealthCare, Cigna and Evernorth, Medica, Medicaid, Midlands Choice, Nebraska Bright Health Care, Optum, UMR, United Healthcare, Out of Network
 
 ![picture](./markdown/resources/images/yHenderson.jpg)

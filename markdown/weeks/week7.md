@@ -1,11 +1,8 @@
 # Week 7
-## Shalom!
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque id nibh tortor id aliquet lectus proin nibh. Vestibulum lorem sed risus ultricies. Fringilla urna porttitor rhoncus dolor purus. Vestibulum rhoncus est pellentesque elit. Enim sit amet venenatis urna cursus. Ut consequat semper viverra nam libero justo laoreet sit amet.
-### Your Child's Development
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque id nibh tortor id aliquet lectus proin nibh. Vestibulum lorem sed risus ultricies. Fringilla urna porttitor rhoncus dolor purus. Vestibulum rhoncus est pellentesque elit.
-#### More Resources
-- [CDC's Developmental Milestones](https://www.cdc.gov/ncbddd/actearly/milestones/index.html)
-### Nutrition Tips and Tricks
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque id nibh tortor id aliquet lectus proin nibh. Vestibulum lorem sed risus ultricies. Fringilla urna porttitor rhoncus dolor purus. Vestibulum rhoncus est pellentesque elit.
-#### More Resources
-- [CDC's Nutrition Tips](https://www.cdc.gov/nutrition/infantandtoddlernutrition/index.html)
+## Nutrition
+- Some breastfeeding moms may find that certain foods can lead to digestive issues or allergic reactions in their babies. Common culprits include dairy, soy, and nuts. 
+- If you notice signs of discomfort in your baby, such as excessive fussiness, rashes, or gastrointestinal distress, consider keeping a food diary to track what you eat and discuss any concerns with your healthcare provider. They may suggest an elimination diet if necessary.
+
+[Click here to learn more](https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/in-depth/breastfeeding-nutrition/art-20046912)
+
+## Weekly Recipe 
