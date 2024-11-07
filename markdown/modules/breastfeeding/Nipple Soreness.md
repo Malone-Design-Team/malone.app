@@ -14,3 +14,5 @@ Your nipples may feel sore or tender when breastfeeding, especially in the first
 - Don't wear tight bras or clothes that put pressure on your nipples.
 - If your nipples are very sore, you can ask your doctor about non-asprin pain relievers.
 - If you're putting off feeding your baby because it is painful, this could harm your milk supply and cause more pain. Talk to your doctor or doula.
+
+![Two women breastfeeding babies on a couch](/images/sabrina_rains_motherhood_session/couch_breastfeeding_top_angle.jpg)
