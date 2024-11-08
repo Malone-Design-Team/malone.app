@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		const prevWeekBtn = document.getElementById("prevWeek");
 		const nextWeekBtn = document.getElementById("nextWeek");
 		const weekIndicator = document.getElementById("weekIndicator");
-		const totalPages = 7;
+		const totalPages = 6;
 
 		prevWeekBtn.disabled = currentWeekIndex === 1;
 		nextWeekBtn.disabled = currentWeekIndex >= totalPages; // Always allow moving to next week
