@@ -419,6 +419,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 function loadModules() {
 	const modulesContainer = document.querySelector("#modules-content");
 	const modules = [
+		{ name: "Breastfeeding", folder: "breastfeeding" },
 		{ name: "Exercise", folder: "exercise" },
 		{ name: "Mental Health", folder: "mental-health" },
 		{ name: "Mindfulness", folder: "mindfulness" },
