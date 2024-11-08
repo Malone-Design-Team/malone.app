@@ -61,6 +61,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
 			} else {
 				hideWeekNavigation();
 			}
+
+			// Hide module navigation when switching to a different tab
+			if (link.id !== "modules-tab") {
+				document.getElementById("module-navigation").style.display = "none";
+			} else {
+				// Show module navigation if we're in a subfolder
+				const folderIndicator = document.querySelector(
+					"#module-navigation span",
+				);
+				if (folderIndicator.textContent) {
+					document.getElementById("module-navigation").style.display = "flex";
+				}
+			}
 		});
 	});
 
@@ -244,7 +257,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		});
 
 	// resources
-	const resourcesContainer = document.querySelector(".resource-cards");
+	const lincolnResourcesContainer =
+		document.querySelector(".lincoln-resources");
+	const omahaResourcesContainer = document.querySelector(".omaha-resources");
 	const resourceSearchInput = document.getElementById("resource-search");
 	const resourceCountElement = document.getElementById("resource-count");
 	let resourceCards = [];
@@ -278,58 +293,76 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		filterResources(e.target.value);
 	});
 
-	fetch("./markdown/resources/index.json")
-		.then((response) => response.json())
-		.then((resourceFiles) => {
-			const loadPromises = resourceFiles.map((file) => {
-				return fetch(`./markdown/resources/${file.name}`)
-					.then((response) => {
-						if (!response.ok) {
-							throw new Error("HTTP error " + response.status);
-						}
-						return response.text();
-					})
-					.then((markdown) => {
-						const html = marked.parse(markdown);
-						const doc = new DOMParser().parseFromString(html, "text/html");
-						const card = document.createElement("div");
-						const title =
-							doc.getElementsByTagName("h1")[0]?.innerText || "No Title";
-						const detailsElements = doc.getElementsByTagName("p");
-						const imageElement = doc.getElementsByTagName("img")[0];
-						let detailsHTML = "";
-						for (let detail of detailsElements) {
-							detailsHTML += `<p class="card-text p-0 m-0">${detail.innerText}</p>`;
-						}
-						card.className =
-							"card d-flex flex-row align-items-center mt-2 mb-2";
-						card.style.maxWidth = "100%";
-						card.style.boxSizing = "border-box";
-						card.innerHTML = `
-							<div style="flex-grow: 1; min-width: 0;">
-								<div class="card-body">
+	function loadResources(city, container) {
+		return fetch(`./markdown/resources/${city}/index.json`)
+			.then((response) => response.json())
+			.then((resourceFiles) => {
+				const loadPromises = resourceFiles.map((file) => {
+					return fetch(`./markdown/resources/${city}/${file.name}`)
+						.then((response) => {
+							if (!response.ok) {
+								throw new Error("HTTP error " + response.status);
+							}
+							return response.text();
+						})
+						.then((markdown) => {
+							const html = marked.parse(markdown);
+							const doc = new DOMParser().parseFromString(html, "text/html");
+							const card = document.createElement("div");
+							const title = doc.querySelector("h1")?.innerText || "No Title";
+							const image = doc.querySelector("img");
+
+							// Remove the image from the document body
+							if (image) {
+								image.parentNode.removeChild(image);
+							}
+
+							const content = Array.from(doc.body.children)
+								.filter((el) => el.tagName !== "H1")
+								.map((el) => el.outerHTML)
+								.join("");
+
+							card.className = "card mt-2 mb-2";
+							card.innerHTML = `
+								<div class="card-header">
 									<h3 class="card-title">${title}</h3>
-									${detailsHTML}
 								</div>
-							</div>
-							${imageElement ? `<img src="${imageElement.src}" style="width: 128px; height: auto; object-fit: cover;" class="ml-3" alt="...">` : ""}
-						`;
+								<div class="card-body d-flex">
+									<div class="flex-grow-1">
+										${content}
+									</div>
+									${
+										image
+											? `<div class="ms-3" style="min-width: 150px; max-width: 200px;">
+										<img src="${image.src}" alt="${image.alt}" class="img-fluid">
+									</div>`
+											: ""
+									}
+								</div>
+							`;
 
-						resourcesContainer.appendChild(card);
-						resourceCards.push(card);
-					})
-					.catch((error) => {
-						console.error("Error loading resources:", error);
-					});
-			});
+							container.appendChild(card);
+							resourceCards.push(card);
+						})
+						.catch((error) => {
+							console.error(`Error loading ${city} resources:`, error);
+						});
+				});
 
-			Promise.all(loadPromises).then(() => {
-				// Initialize resource count after all resources are loaded
-				updateResourceCount(resourceCards.length);
+				return Promise.all(loadPromises);
 			});
+	}
+
+	Promise.all([
+		loadResources("lincoln", lincolnResourcesContainer),
+		loadResources("omaha", omahaResourcesContainer),
+	])
+		.then(() => {
+			// Initialize resource count after all resources are loaded
+			updateResourceCount(resourceCards.length);
 		})
 		.catch((error) => {
-			console.error("Error loading resources index:", error);
+			console.error("Error loading resources:", error);
 		});
 	// settings
 	const settingsForm = document.getElementById("settings-form");
@@ -338,6 +371,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	const communicationInputs = document.querySelectorAll(
 		'input[name="communication"]',
 	);
+	const disclaimerCheckbox = document.getElementById("disclaimer-checkbox");
 
 	// Load settings from local storage
 	expectedDayInput.value = localStorage.getItem("expectedDay") || "";
@@ -349,6 +383,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	communicationInputs.forEach((input) => {
 		input.checked = localStorage.getItem(input.value) === "true";
 	});
+	disclaimerCheckbox.checked =
+		localStorage.getItem("disclaimerAccepted") === "true";
+
+	// Show disclaimer alert if not accepted
+	if (localStorage.getItem("disclaimerAccepted") !== "true") {
+		alert("This is not medical advice.");
+	}
 
 	// save settings to browser storage
 	settingsForm.addEventListener("submit", function (event) {
@@ -362,6 +403,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		communicationInputs.forEach((input) => {
 			localStorage.setItem(input.value, input.checked);
 		});
+		localStorage.setItem("disclaimerAccepted", disclaimerCheckbox.checked);
 		alert("Settings saved!");
 
 		// Update the current week and load the new content
@@ -483,7 +525,14 @@ function updateModuleNavigation(folder, path) {
 	backButton.innerHTML = "&lt; Modules";
 	backButton.onclick = loadModules;
 	folderIndicator.textContent = path ? path.split("/").pop() || folder : folder;
-	moduleNavigation.style.display = folder ? "flex" : "none";
+
+	// Only show navigation if we're on the modules tab
+	const modulesTab = document.getElementById("modules-tab");
+	if (modulesTab.classList.contains("active")) {
+		moduleNavigation.style.display = folder ? "flex" : "none";
+	} else {
+		moduleNavigation.style.display = "none";
+	}
 }
 
 function loadModuleFile(folder, filePath) {

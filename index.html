@@ -44,7 +44,10 @@
         <input type="text" class="form-control" id="resource-search" placeholder="Search resources..." autocomplete="off">
         <div id="resource-count" class="mt-2"></div>
       </div>
-      <div class="resource-cards"></div>
+      <h2>Lincoln</h2>
+      <div class="resource-cards lincoln-resources"></div>
+      <h2>Omaha</h2>
+      <div class="resource-cards omaha-resources"></div>
     </div>
     <div class="container tab-pane" id="settings" role="tabpanel">
       <h1>Settings</h3>
@@ -95,6 +98,11 @@
                 Exercise
               </label>
             </div>
+          </div>
+          <div class="mb-3 form-check">
+          	<span class="form-label">This is not medical advice.</span>
+            <input type="checkbox" class="form-check-input" id="disclaimer-checkbox">
+            <label class="form-check-label" for="disclaimer-checkbox">The information, including but not limited to, text, graphics, images and other material contained on this website are for informational purposes only. No material on this site is intended to be a substitute for professional medical advice, diagnosis or treatment. Always seek the advice of your physician or other qualified health care provider with any questions you may have regarding a medical condition or treatment and before undertaking a new health care regimen, and never disregard professional medical advice or delay in seeking it because of something you have read on this website.</label>
           </div>
           <button type="submit" class="btn btn-primary">Save Settings</button>
         </form>
