@@ -388,7 +388,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 	// Show disclaimer alert if not accepted
 	if (localStorage.getItem("disclaimerAccepted") !== "true") {
-		alert("This is not medical advice.");
+		alert("Welcome to the Malone app. This is not medical advice.");
 	}
 
 	// save settings to browser storage
