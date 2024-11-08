@@ -1,6 +1,3 @@
 ### Q: How can I find time to bond with my baby? 
 
-A: Incorporate bonding moments into your daily routine, like skin-to-skin time during feeding or reading together. 
-[https://health.ucdavis.edu/blog/cultivating-health/infant-bonding-and-your-babys-development-tips-for-parents-to-encourage-bonding/2023/11]
-[https://www.babycenter.com/baby/newborn-baby/bonding-with-your-newborn_658]
-[https://www.parents.com/baby/feeding/30-little-ways-to-bond-with-baby/]
+A: Consider incorporating your infant into your daily routine, like having them with you when you read. Talk to them or simply have them nearby during conversations, and have physical contact like breastfeeding or bottle feeding. Carrying, cradling, rocking, and stroking your baby are all pleasant things to do as well. Infant massage is also a bonding technique, but it's easy to hurt your baby doing it. Do your research and consider consulting others before performing infant massage.
