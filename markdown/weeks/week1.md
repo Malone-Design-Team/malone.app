@@ -28,8 +28,8 @@ You should contact your health care provider in the next 3 weeks to talk about y
 ![Woman with breastfeeding baby holds partner's hand](/images/couple_and_baby/cafe_holding_hands_baby_angle_closeup2.jpg)
 
 ## Nutrition
-- Staying well-hydrated is essential for postpartum recovery and breastfeeding. Aim to drink at least 8-10 cups of water daily, adjusting based on your individual needs and activity levels. 
-- Proper hydration not only supports milk production but also helps maintain energy levels during those demanding early days with a newborn. 
+- Staying well-hydrated is essential for postpartum recovery and breastfeeding. Aim to drink at least 8-10 cups of water daily, adjusting based on your individual needs and activity levels.
+- Proper hydration not only supports milk production but also helps maintain energy levels during those demanding early days with a newborn.
 - Incorporate herbal teas or infused water with fruits for added flavor and variety. Listening to your body’s thirst cues is key; drink when you're thirsty to keep your fluid levels optimal.
 
 [Click here to learn more](https://www.nebraskamed.com/womens-health/pregnancy-birth/postnatal-vitamins-and-postpartum-nutrition-6-tips-for-breastfeeding-moms)
@@ -42,7 +42,7 @@ Submitted by Tanaquil, this quick recipe only takes half an hour, and is sure to
 [Recipe Link](https://www.allrecipes.com/recipe/86047/garlic-chicken-fried-chicken/)
 
 # Header Levels
-[testing a deeplink](?tab=modules&module=exercise/short-example.md)
+[testing a deeplink](?tab=modules&module=nutrition/recipes/Garlic_Chicken.md)
 [another deeplink](?tab=faq)
 ### Three Pound Signs
 #### Four Pound Signs
