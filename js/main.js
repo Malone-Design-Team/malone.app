@@ -151,15 +151,40 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	function loadWeekContent(week) {
-		fetch(`./markdown/weeks/week${week}.md`)
-			.then((response) => {
-				if (!response.ok) throw new Error("HTTP error " + response.status);
-				return response.text();
-			})
-			.then((markdown) => {
-				const html = marked.parse(markdown);
+		const isPartnerMode = localStorage.getItem("partnerMode") === "true";
+		const userType = isPartnerMode ? "partner" : "mom";
+		const weekFiles = [
+			{ file: `week${week}.md`, alwaysInclude: true },
+			{ file: `week${week}-development.md`, preference: "Development" },
+			{ file: `week${week}-exercise.md`, preference: "Exercise" },
+			{ file: `week${week}-mentalhealth.md`, preference: "Mental Health" },
+			{ file: `week${week}-nutrition.md`, preference: "Nutrition" },
+		];
+
+		const filesToLoad = weekFiles.filter(
+			(file) =>
+				file.alwaysInclude || localStorage.getItem(file.preference) === "true",
+		);
+
+		Promise.all(
+			filesToLoad.map((file) =>
+				fetch(`./markdown/weeks/week${week}/${userType}/${file.file}`)
+					.then((response) => {
+						if (!response.ok)
+							throw new Error(`HTTP error ${response.status} for ${file.file}`);
+						return response.text();
+					})
+					.catch((error) => {
+						console.error(`Error loading ${file.file}:`, error);
+						return ""; // Return empty string if file not found or other error
+					}),
+			),
+		)
+			.then((markdowns) => {
+				const combinedMarkdown = markdowns.join("\n\n");
+				const html = marked.parse(combinedMarkdown);
 				const doc = new DOMParser().parseFromString(html, "text/html");
-				doc.querySelectorAll("h1")[0].classList.add("week-title");
+				doc.querySelectorAll("h1")[0]?.classList.add("week-title");
 
 				weekContainer.innerHTML = "";
 				const card = document.createElement("div");
@@ -314,17 +339,20 @@ document.addEventListener("DOMContentLoaded", () => {
 			'input[name="communication"]',
 		);
 		const disclaimerCheckbox = document.getElementById("disclaimer-checkbox");
-
 		// Load saved settings
 		expectedDayInput.value = localStorage.getItem("expectedDay") || "";
+		const savedRole = localStorage.getItem("role");
 		roleInputs.forEach((input) => {
-			input.checked = input.value === localStorage.getItem("role");
+			input.checked = input.value === savedRole;
 		});
 		communicationInputs.forEach((input) => {
 			input.checked = localStorage.getItem(input.value) === "true";
 		});
 		disclaimerCheckbox.checked =
 			localStorage.getItem("disclaimerAccepted") === "true";
+		
+		// Set partner mode based on the saved role
+		localStorage.setItem("partnerMode", savedRole === "Father/Partner");
 
 		// Show disclaimer if not accepted
 		if (localStorage.getItem("disclaimerAccepted") !== "true") {
@@ -343,12 +371,21 @@ document.addEventListener("DOMContentLoaded", () => {
 				localStorage.setItem(input.value, input.checked);
 			});
 			localStorage.setItem("disclaimerAccepted", disclaimerCheckbox.checked);
+			const selectedRole = Array.from(roleInputs).find(input => input.checked)?.value;
+			localStorage.setItem("partnerMode", selectedRole === "Father/Partner");
 
 			alert("Settings saved!");
 
 			currentWeekIndex = calculateCurrentWeek();
 			loadWeekContent(currentWeekIndex);
 			document.getElementById("home-tab").click();
+		});
+
+		// Add event listener for role change
+		roleInputs.forEach(input => {
+			input.addEventListener('change', (event) => {
+				localStorage.setItem("partnerMode", event.target.value === "Father/Partner");
+			});
 		});
 	}
 

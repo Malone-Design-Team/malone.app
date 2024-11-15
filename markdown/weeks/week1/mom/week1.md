@@ -15,36 +15,7 @@ You should contact your health care provider in the next 3 weeks to talk about y
 
 ![Woman talking on phone while using breast pump](/images/bjorn_and_breast_pump/pump_phone_call.jpg)
 
-## Your Mental Health
-- At least 10% of people struggle with depression and anxiety after giving birth (postpartum mood disorders). Keep an eye out for this—it's normal and nothing to be ashamed of.
-    - Symptoms may include losing enjoyment in things, anxiety seemingly without reason, tiredness, and others. [Tap here to learn more.](?tab=modules&module=mental-health/Postpartum-mood-screening.md)
-    - If you believe that you may have postpartum depression or have thoughts of harming yourself or your baby, contact your doctor.
-- It’s important to practice mindfulness! [Tap here to learn about mindfulness.](?tab=modules&module=mindfulness/Mindfulness.md)
-    - Have you heard of the breath counting exercise? Give it a shot if you’re feeling anxious! [Tap here to view the exercise.](?tab=modules&module=mindfulness/Breath-Counting-Breathing-Exercise.md)
-
 ## Breastfeeding
 - For a few days after giving birth, you might have full, firm, sore breasts. Breastfeed your baby often on both breasts to help keep them from overfilling.
 
 ![Woman with breastfeeding baby holds partner's hand](/images/couple_and_baby/cafe_holding_hands_baby_angle_closeup2.jpg)
-
-## Nutrition
-- Staying well-hydrated is essential for postpartum recovery and breastfeeding. Aim to drink at least 8-10 cups of water daily, adjusting based on your individual needs and activity levels.
-- Proper hydration not only supports milk production but also helps maintain energy levels during those demanding early days with a newborn.
-- Incorporate herbal teas or infused water with fruits for added flavor and variety. Listening to your body’s thirst cues is key; drink when you're thirsty to keep your fluid levels optimal.
-
-[Click here to learn more](https://www.nebraskamed.com/womens-health/pregnancy-birth/postnatal-vitamins-and-postpartum-nutrition-6-tips-for-breastfeeding-moms)
-
-## Weekly Recipe
-Garlic Chicken Fried Chicken
-![picture](/markdown/modules/nutrition/recipes/images/Garlic_chicken.png)
-Submitted by Tanaquil, this quick recipe only takes half an hour, and is sure to deliver a crispy, flavorful meal in a short amount of time. And, it only uses a few ingredients!
-
-[Recipe Link](https://www.allrecipes.com/recipe/86047/garlic-chicken-fried-chicken/)
-
-# Header Levels
-[testing a deeplink](?tab=modules&module=nutrition/recipes/Garlic_Chicken.md)
-[another deeplink](?tab=faq)
-### Three Pound Signs
-#### Four Pound Signs
-##### Five Pound Signs
-###### Six Pound Signs
