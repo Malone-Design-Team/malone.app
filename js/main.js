@@ -350,13 +350,15 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 		disclaimerCheckbox.checked =
 			localStorage.getItem("disclaimerAccepted") === "true";
-		
+
 		// Set partner mode based on the saved role
 		localStorage.setItem("partnerMode", savedRole === "Father/Partner");
 
 		// Show disclaimer if not accepted
 		if (localStorage.getItem("disclaimerAccepted") !== "true") {
-			alert("Welcome to the Malone app. This is not medical advice.");
+			alert(
+				"Welcome to the Malone app. This is not medical advice. Visit the settings page to customize your experience.",
+			);
 		}
 
 		// Save settings
@@ -371,7 +373,9 @@ document.addEventListener("DOMContentLoaded", () => {
 				localStorage.setItem(input.value, input.checked);
 			});
 			localStorage.setItem("disclaimerAccepted", disclaimerCheckbox.checked);
-			const selectedRole = Array.from(roleInputs).find(input => input.checked)?.value;
+			const selectedRole = Array.from(roleInputs).find(
+				(input) => input.checked,
+			)?.value;
 			localStorage.setItem("partnerMode", selectedRole === "Father/Partner");
 
 			alert("Settings saved!");
@@ -382,9 +386,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 
 		// Add event listener for role change
-		roleInputs.forEach(input => {
-			input.addEventListener('change', (event) => {
-				localStorage.setItem("partnerMode", event.target.value === "Father/Partner");
+		roleInputs.forEach((input) => {
+			input.addEventListener("change", (event) => {
+				localStorage.setItem(
+					"partnerMode",
+					event.target.value === "Father/Partner",
+				);
 			});
 		});
 	}
