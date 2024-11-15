@@ -359,6 +359,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			alert(
 				"Welcome to the Malone app. This is not medical advice. Visit the settings page to customize your experience.",
 			);
+			communicationInputs.forEach((input) => {
+				input.checked = true;
+			});
 		}
 
 		// Save settings
