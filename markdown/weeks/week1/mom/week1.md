@@ -14,8 +14,3 @@ You should contact your health care provider in the next 3 weeks to talk about y
     - They don’t need treatment and *fade over time* on their own.
 
 ![Woman talking on phone while using breast pump](/images/bjorn_and_breast_pump/pump_phone_call.jpg)
-
-## Breastfeeding
-- For a few days after giving birth, you might have full, firm, sore breasts. Breastfeed your baby often on both breasts to help keep them from overfilling.
-
-![Woman with breastfeeding baby holds partner's hand](/images/couple_and_baby/cafe_holding_hands_baby_angle_closeup2.jpg)

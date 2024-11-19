@@ -155,10 +155,14 @@ document.addEventListener("DOMContentLoaded", () => {
 		const userType = isPartnerMode ? "partner" : "mom";
 		const weekFiles = [
 			{ file: `week${week}.md`, alwaysInclude: true },
-			{ file: `week${week}-development.md`, preference: "Development" },
+			{ file: `week${week}-breastfeeding.md`, preference: "Breastfeeding" },
 			{ file: `week${week}-exercise.md`, preference: "Exercise" },
 			{ file: `week${week}-mentalhealth.md`, preference: "Mental Health" },
+			{ file: `week${week}-mindfulness.md`, preference: "Mindfulness" },
 			{ file: `week${week}-nutrition.md`, preference: "Nutrition" },
+			{ file: `week${week}-physicalhealth.md`, preference: "Physical Health" },
+			{ file: `week${week}-sexualhealth.md`, preference: "Sexual Health" },
+			{ file: `week${week}-socialsupport.md`, preference: "Social Support" },
 		];
 
 		const filesToLoad = weekFiles.filter(
@@ -199,6 +203,8 @@ document.addEventListener("DOMContentLoaded", () => {
 				alert(`Week ${week} content is not available.`);
 			});
 	}
+
+	window.loadWeekContent = loadWeekContent;
 
 	function updateWeekNavigation() {
 		const prevWeekBtn = document.getElementById("prevWeek");
@@ -408,6 +414,18 @@ document.addEventListener("DOMContentLoaded", () => {
 	initializeFAQ();
 	initializeResources();
 	initializeSettings();
+
+	document.getElementById("prevWeek").addEventListener("click", () => {
+		if (currentWeekIndex > 1) {
+			currentWeekIndex--;
+			loadWeekContent(currentWeekIndex);
+		}
+	});
+
+	document.getElementById("nextWeek").addEventListener("click", () => {
+		currentWeekIndex++;
+		loadWeekContent(currentWeekIndex);
+	});
 
 	// Initial home tab state
 	if (homeTab.classList.contains("active")) {
