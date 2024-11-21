@@ -1,4 +1,4 @@
-### What causes nipple soreness and what can you do to alleviate it?
+# What causes nipple soreness and what can you do to alleviate it?
 
 Your nipples may feel sore or tender when breastfeeding, especially in the first week. The cause may not be obvious, but there are many things you can do to [reduce nipple soreness](https://www.womenshealth.gov/breastfeeding/breastfeeding-challenges/common-breastfeeding-challenges):
 - Your baby should suckle not just the nipple, but also the whole areola (the darker colored area around the nipple).

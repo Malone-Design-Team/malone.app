@@ -44,7 +44,10 @@
         <input type="text" class="form-control" id="resource-search" placeholder="Search resources..." autocomplete="off">
         <div id="resource-count" class="mt-2"></div>
       </div>
-      <div class="resource-cards"></div>
+      <h2>Lincoln</h2>
+      <div class="resource-cards lincoln-resources"></div>
+      <h2>Omaha</h2>
+      <div class="resource-cards omaha-resources"></div>
     </div>
     <div class="container tab-pane" id="settings" role="tabpanel">
       <h1>Settings</h3>
@@ -72,9 +75,15 @@
           <div class="mb-3">
             <span class="form-label">Check all topics you wish to receive information on:</span>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="communication-development" name="communication" value="Development">
-              <label class="form-check-label" for="communication-development">
-                Development
+              <input class="form-check-input" type="checkbox" id="communication-social-support" name="communication" value="Social Support">
+              <label class="form-check-label" for="communication-social-support">
+                Social Support
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="communication-physical-health" name="communication" value="Physical Health & Changes">
+              <label class="form-check-label" for="communication-physical-health">
+                Physical Health & Changes
               </label>
             </div>
             <div class="form-check">
@@ -90,11 +99,34 @@
               </label>
             </div>
             <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="communication-mindfulness" name="communication" value="Mindfulness">
+              <label class="form-check-label" for="communication-mindfulness">
+                Mindfulness
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="communication-sexual-health" name="communication" value="Sexual Health">
+              <label class="form-check-label" for="communication-sexual-health">
+                Sexual Health
+              </label>
+            </div>
+            <div class="form-check">
               <input class="form-check-input" type="checkbox" id="communication-exercise" name="communication" value="Exercise">
               <label class="form-check-label" for="communication-exercise">
                 Exercise
               </label>
             </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="communication-breastfeeding" name="communication" value="Breastfeeding">
+              <label class="form-check-label" for="communication-breastfeeding">
+                Breastfeeding
+              </label>
+            </div>
+          </div>
+          <div class="mb-3 form-check">
+          	<span class="form-label">This is not medical advice.</span>
+            <input type="checkbox" class="form-check-input" id="disclaimer-checkbox">
+            <label class="form-check-label" for="disclaimer-checkbox">The information, including but not limited to, text, graphics, images and other material contained on this website are for informational purposes only. No material on this site is intended to be a substitute for professional medical advice, diagnosis or treatment. Always seek the advice of your physician or other qualified health care provider with any questions you may have regarding a medical condition or treatment and before undertaking a new health care regimen, and never disregard professional medical advice or delay in seeking it because of something you have read on this website.</label>
           </div>
           <button type="submit" class="btn btn-primary">Save Settings</button>
         </form>

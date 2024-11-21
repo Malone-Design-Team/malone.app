@@ -57,7 +57,7 @@ body {
 .nav-link {
 	color: var(--malone-dark-blue);
 	text-align: center;
-	width: var(--tab-icon-width);
+	/* width: var(--tab-icon-width); */
 }
 
 .nav-link * {
