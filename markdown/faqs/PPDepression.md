@@ -15,3 +15,5 @@ A: Some feelings of stress, anxiety, sadness, or tiredness are expected after gi
 - Disinterest in the baby, family, and friends
 - Difficulty concentrating, remembering details, or making decisions
 - Thoughts of hurting yourself or the baby
+
+[Tap here](?tab=modules&module=mental-health/Postpartum-mood-screening.md) for more information about postpartum mood screenings.
