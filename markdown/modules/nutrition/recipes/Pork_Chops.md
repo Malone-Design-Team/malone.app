@@ -1,7 +1,7 @@
-# Garlic Chicken Fried Chicken
+# Smothered Pork Chops
 
-![picture](/markdown/modules/nutrition/recipes/images/Garlic_chicken.png)
+![picture](/markdown/modules/nutrition/recipes/images/PorkChops.jpg)
 
-Submitted by Tanaquil, this quick recipe only takes half an hour, and is sure to deliver a crispy, flavorful meal in a short amount of time. And, it only uses a few ingredients!
+Get ready to experience the ultimate comfort food with Jocelyn's (Grandbaby Cakes) Smothered Pork Chops! Hailing from Mississippi, this recipe is a true Southern classic that starts with lightly breaded, pan-fried pork chops and is smothered in a rich, savory roux-based brown gravy. Each bite is packed with well-seasoned flavor and melt-in-your-mouth tenderness—nothing compares to this soul-satisfying dish. Trust me, once you try these chops, you’ll never look back. This is Soul Food done right, just like mama made it! Don't settle for anything less than the best—Jocelyn's recipe is the undisputed champ!
 
-[Recipe Link](https://www.allrecipes.com/recipe/86047/garlic-chicken-fried-chicken/)
+[Recipe Link](https://grandbaby-cakes.com/smothered-pork-chops-recipe/)
