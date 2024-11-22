@@ -1,4 +1,4 @@
-# Finding Social Support
+# Social Support
 
 The largest drop in relationship satisfaction happens in the first 6 months of the postpartum period, aka right now. This is a normal part of having a new child. It can happen to new and experienced parents alike! There's a few reasons for this drop in satisfaction:
 
