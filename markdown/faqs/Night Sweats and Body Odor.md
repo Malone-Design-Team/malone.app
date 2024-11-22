@@ -1,0 +1,3 @@
+### Q: Is it normal to experience night sweats and increased body odor after childbirth?
+
+A: Yes, it's common for new mothers to experience night sweats and changes in body odor during the postpartum period. Hormonal fluctuations, particularly the drop in estrogen levels, can lead to excessive sweating as your body sheds the extra fluids retained during pregnancy. This is usually temporary and should subside within a few weeks. Staying hydrated and wearing breathable fabrics can help manage these symptoms.

@@ -1,0 +1,3 @@
+### Q: Why do I still look pregnant months after delivery, and could it be due to diastasis recti?
+
+A: Many women notice a persistent belly bulge months after giving birth, which can be caused by diastasis recti—a separation of the abdominal muscles that occurs during pregnancy. This condition can weaken the core and affect posture. Specific exercises and physical therapy can help strengthen these muscles and reduce the separation. It's advisable to consult a healthcare provider for a proper assessment and personalized recovery plan.

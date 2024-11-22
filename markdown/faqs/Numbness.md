@@ -1,0 +1,3 @@
+### Q: Is it normal to experience numbness or decreased sensation around my cesarean scar or perineal area?
+
+A: Yes, experiencing numbness or altered sensation around the cesarean incision site or the perineal area (if you had a vaginal delivery with tearing or an episiotomy) is common. This occurs because nerves are cut or stretched during surgery or childbirth. Sensation often gradually returns over several months, but some areas might remain less sensitive. If you're concerned or if the numbness is accompanied by other symptoms like pain or signs of infection, it's important to consult your healthcare provider.
