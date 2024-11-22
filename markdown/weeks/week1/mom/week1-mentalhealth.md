@@ -1,6 +1,5 @@
-## Your Mental Health
-- At least 10% of people struggle with depression and anxiety after giving birth (postpartum mood disorders). Keep an eye out for this—it's normal and nothing to be ashamed of.
-    - Symptoms may include losing enjoyment in things, anxiety seemingly without reason, tiredness, and others. [Tap here to learn more.](?tab=modules&module=mental-health/Postpartum-mood-screening.md)
-    - If you believe that you may have postpartum depression or have thoughts of harming yourself or your baby, contact your doctor.
-- It’s important to practice mindfulness! [Tap here to learn about mindfulness.](?tab=modules&module=mindfulness/Mindfulness.md)
-    - Have you heard of the breath counting exercise? Give it a shot if you’re feeling anxious! [Tap here to view the exercise.](?tab=modules&module=mindfulness/Breath-Counting-Breathing-Exercise.md)
+### Your Mental Health
+
+At least 10% of people struggle with depression and anxiety after giving birth (postpartum mood disorders). Keep an eye out for this—it's normal and nothing to be ashamed of but sometimes requires professional help. A few symptoms to watch out for include losing enjoyment in your normal interests and hobbies, anxiety seemingly without reason, tiredness (beyond the normal of being a parent!), and others. Sometimes mindfulness exercises can help - take a look at the Mindfulness section under the modules tab or in the weekly breakdown for some to try. If you believe that you may have postpartum depression, this screening [here](?tab=modules&module=mental-health/Postpartum-mood-screening.md) is used by professionals to help with diagnosis. 
+
+If you have thoughts of harming yourself or your baby, reach out for help. You can contact your doctor, a mental health professional, or call 988 (the emergency mental health line) in case of an immediate crisis.
