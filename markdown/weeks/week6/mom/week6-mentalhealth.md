@@ -1,5 +1,3 @@
-## Mental Health
-- Now that it's been 6 weeks, doctors recommend that you check up on your mental health!
-  - You may want to sit down and fill out the Edinburgh Postnatal Depression Scale and the Postpartum Specific Anxiety Scale a second time. **[insert links]**
+Exhaustion and feeling overwhelmed is typical, but depression, anxiety, etc., should be treated by a professional. If you haven’t checked in with your healthcare provider already, it’s a good idea to do so at the six-week mark (Rasminsky, 2018). Postpartum depression tends to peak around this time, so keep an eye out (Pevzner, n.d.).
 
 ![Family walking on a beach](/markdown/weeks/images/lawrence-crayton-family-on-beach.jpg)
