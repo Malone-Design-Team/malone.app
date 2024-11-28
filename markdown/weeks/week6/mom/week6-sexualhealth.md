@@ -1,0 +1,9 @@
+So you’ve waited six weeks, your doctor has given you the green light, and you’re ready to have sex with your partner again. What should you expect?
+
+- Some discomfort during your first few postpartum attempts is normal, but you should not be in pain during sex. If you are, don’t try to have sex again until you talk to your doctor to make sure everything’s okay!
+- This discomfort is often partly because of scar tissue from tears – parts of the tissue will be less stretchy than their surroundings. This is normal – as your body continues to heal, this tissue will become softer. Regular sexual activity may also help stretch and soften the tissue as well. Make sure to communicate with each other throughout this.
+- You may also be more likely to have vaginal dryness. This gets better as your periods start again or after you stop breastfeeding. If it isn’t improving after a few tries, your doctor maybe be able to help you find medications or lubrication options to help with this.
+- You might have a lower libido for a while. It may be because of everything that goes into taking care of a newborn, or it may be because of postpartum blues (sometimes experienced in the week or two after delivery; crying, feeling anxious, or feeling sad for no apparent reason), or it may be for another reason entirely. This is normal, and not permanent!
+- Sex in and of itself will also feel different based on how your pelvic floor muscles change after giving birth. This is also completely normal but can be improved over time by doing pelvic floor exercises or physical therapy. Talk to your health care provider to see if it would be helpful.
+
+More information about all of this can be found [here](https://health.clevelandclinic.org/sex-after-birth) and [here](https://www.mayoclinic.org/healthy-lifestyle/labor-and-delivery/in-depth/sex-after-pregnancy/art-20045669).
