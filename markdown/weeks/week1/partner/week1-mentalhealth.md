@@ -4,3 +4,5 @@
     - If you believe that your partner may have postpartum depression or if they have thoughts of harming themselves or the baby, encourage them to contact their doctor.
 - It’s important to practice mindfulness! [Tap here to learn about mindfulness.](?tab=modules&module=mindfulness/Mindfulness.md)
     - Have you heard of the breath counting exercise? Suggest it to your partner if they’re feeling anxious! [Tap here to view the exercise.](?tab=modules&module=mindfulness/Breath-Counting-Breathing-Exercise.md)
+
+![](/markdown/weeks/images/mental_health_week1.jpg)

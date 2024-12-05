@@ -5,6 +5,8 @@
 
 [Click here to learn more](https://www.nebraskamed.com/womens-health/pregnancy-birth/postnatal-vitamins-and-postpartum-nutrition-6-tips-for-breastfeeding-moms)
 
+![](/markdown/weeks/images/nutrition_week1.jpg)
+
 ## Weekly Recipe
 Garlic Chicken Fried Chicken
 ![picture](/markdown/modules/nutrition/recipes/images/Garlic_chicken.png)

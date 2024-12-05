@@ -8,3 +8,5 @@ Below are a few tips and tricks for nutrition for both you and your baby, as wel
 
 This week's recipes are [Garlic Chicken Fried Chicken](/markdown/modules/nutrition/recipes/Garlic_Chicken.md) and 
 [Bean Salad](/markdown/modules/nutrition/recipes/Bean_Salad.md). Find more specifics and links to the recipes by clicking on their names.
+
+![](/markdown/weeks/images/nutrition_week1.jpg)
