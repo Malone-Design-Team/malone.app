@@ -1,3 +1,3 @@
-### Exercise
+##### Exercise
 
-An example of exercise content.
+Check back next week for more content!
