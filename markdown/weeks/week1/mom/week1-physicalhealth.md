@@ -20,4 +20,6 @@ The following are signs that you need to call your doctor:
 * Inability to control bowel movements or poop leakage
 * Vision changes
 
-For more information, check out this link [here](https://health.clevelandclinic.org/postpartum-recovery). If you are unsure or something doesn't feel right, don't hesitate to call your doctor. It's always better to be safe than sorry.
+For more information, check out this link [here](https://health.clevelandclinic.org/postpartum-recovery), or [here](https://www.hopkinsmedicine.org/health/conditions-and-diseases/staying-healthy-during-pregnancy/complications-of-pregnancy) for more information about common pregnancy-related complications.If you are unsure or something doesn't feel right, don't hesitate to call your doctor. It's always better to be safe than sorry.
+
+![Woman talking on phone while using breast pump](/images/bjorn_and_breast_pump/pump_phone_call.jpg)
