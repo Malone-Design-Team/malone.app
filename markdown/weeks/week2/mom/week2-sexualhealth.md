@@ -1,0 +1,3 @@
+##### Sexual Health
+
+A lot of people wonder how soon after pregnancy you can start having sex again. Generally, it’s recommended that you wait anywhere from two to six weeks before resuming sexual activity, but this is a recommendation not a rule, is heavily based on the circumstances of your delivery, and will be up to you to decide on in the end. According to Cleveland Clinic, “there are a few physical/medical reasons to wait. For one, your pelvic floor (the muscles that line your vagina and support your bladder) will need some time to rest and recover. Also, following delivery, your cervix takes some time to return to its pre-pregnancy state. Infection can make its way in more easily during this time, too.” ([link](https://health.clevelandclinic.org/sex-after-birth))
