@@ -1,4 +1,4 @@
-## The 4-7-8 (or Relaxing Breath) Exercise 
+# The 4-7-8 (or Relaxing Breath) Exercise 
 
 * This exercise is very simple, takes almost no time, requires no equipment and can be done anywhere. Although you can do the exercise in any position, it's helpful to sit with your back straight while learning the exercise.
 * Place the tip of your tongue against the ridge of tissue just behind your upper front teeth, and keep it there through the entire exercise. You will be exhaling through your mouth around your tongue; try pursing your lips slightly if this seems awkward.
