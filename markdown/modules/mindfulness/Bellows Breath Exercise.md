@@ -1,4 +1,4 @@
-## The Stimulating (Bellows) Breath 
+# The Stimulating (Bellows) Breath 
 
 * This exercise is adapted from a yogic breathing technique. It aims to raise vital energy and increase alertness. Heads up, this is a noisy breathing exercise!
 * Inhale and exhale rapidly through your nose, keeping your mouth closed but relaxed. Your breaths in and out should be equal in duration, but as short as possible.
