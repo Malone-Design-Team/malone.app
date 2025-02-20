@@ -7,4 +7,4 @@ Below are a few tips and tricks for nutrition for both yourself and your baby, a
 * Check [here](https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/in-depth/breastfeeding-nutrition/art-20046912) for other tips and tricks about nutrition! 
 
 This week's recipes are [Chili](?tab=modules&module=nutrition/recipes/Chili.md) and 
-[Frito Pie](?tab=modules&module=nutrition/recipes/Frito Pie.md). Find more specifics and links to the recipes by clicking on their names.
+[Frito Pie](?tab=modules&module=nutrition/recipes/Frito%20Pie.md). Find more specifics and links to the recipes by clicking on their names.
