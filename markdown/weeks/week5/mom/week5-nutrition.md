@@ -7,4 +7,4 @@ Below are a few tips and tricks for nutrition for both yourself and your baby, a
 * Ensuring you get adequate amounts of these nutrients can enhance your overall health and recovery.
 * Check [here](https://www.nebraskamed.com/womens-health/pregnancy-birth/postnatal-vitamins-and-postpartum-nutrition-6-tips-for-breastfeeding-moms) for other tips and tricks about nutrition! 
 
-This week's recipes are [Ribs](?tab=modules&module=nutrition/recipes/Ribs.md) and [Power Bowl](?tab=modules&module=nutrition/recipes/Power Bowl.md). Find more specifics and links to the recipes by clicking on their names.
+This week's recipes are [Ribs](?tab=modules&module=nutrition/recipes/Ribs.md) and [Power Bowl](?tab=modules&module=nutrition/recipes/Power%20Bowl.md). Find more specifics and links to the recipes by clicking on their names.
