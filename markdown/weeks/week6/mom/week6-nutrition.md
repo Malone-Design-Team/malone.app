@@ -10,6 +10,6 @@ Below are a few tips and tricks for nutrition for both yourself and your baby, a
 - Check [here](https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/in-depth/breastfeeding-nutrition/art-20046912) for other tips and tricks about nutrition!
 
 This week's recipes are [Taquitos](/markdown/modules/nutrition/recipes/taquitos.md) and 
-[Wedge Salad](/markdown/modules/nutrition/recipes/Wedge_Salad.md). Find more specifics and links to the recipes by clicking on their names.
+[Wedge Salad](/markdown/modules/nutrition/recipes/Wedge Salad.md). Find more specifics and links to the recipes by clicking on their names.
 
 
