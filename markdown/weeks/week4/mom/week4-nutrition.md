@@ -7,4 +7,4 @@ Below are a few tips and tricks for nutrition for both yourself and your baby, a
 * This combination helps keep you feeling full longer and supports your body’s healing processes.
 * Check [here](https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/in-depth/breastfeeding-nutrition/art-20046912) for other tips and tricks about nutrition! 
 
-This week's recipes are [Corn Chowder](?tab=modules&module=nutrition/recipes/Corn_Chowder.md) and [Pork Chops](?tab=modules&module=nutrition/recipes/Pork_Chops.md). Find more specifics and links to the recipes by clicking on their names.
+This week's recipes are [Corn Chowder](?tab=modules&module=nutrition/recipes/Corn Chowder.md) and [Pork Chops](?tab=modules&module=nutrition/recipes/Pork Chops.md). Find more specifics and links to the recipes by clicking on their names.
