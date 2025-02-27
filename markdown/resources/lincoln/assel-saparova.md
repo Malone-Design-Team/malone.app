@@ -7,6 +7,8 @@ About: I am an EMDR therapist and help people to work through their trauma and p
 Telehealth Only
 
 ---
+Contact/More Info
+--
 
 Contact: [531.233.4903](tel:5312334903)
 
