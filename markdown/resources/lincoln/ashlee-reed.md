@@ -9,6 +9,6 @@ Lincoln, NE 68507
 To make an appointment or to ask any questions, email at: <ashlee@lincolnwellnessgroup.com>
 
 
-[Lincoln Wellness](https://www.lincolnwellnessgroup.com/ashlee-reed/)
+[Learn More](https://www.lincolnwellnessgroup.com/ashlee-reed/)
 
 ![picture](./markdown/resources/images/aReed.jpeg)
