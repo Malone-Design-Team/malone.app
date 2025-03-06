@@ -1,4 +1,4 @@
-# Amedisys 
+# Amedisys - Various Healthcare Resources
 
 
 Amedisys is a leading provider of in-home healthcare, providing home health care, hospice care, palliative care, and high-acuity care to more than 465,000 patients each year across the country.
