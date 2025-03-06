@@ -1,4 +1,4 @@
-# Ashlee Reed
+# Ashlee Reed - Mental Health Professional
 
 Licensed mental health professional with the Lincoln Wellness Group serving telehealth patients at this time.
 
@@ -9,6 +9,6 @@ Lincoln, NE 68507
 
 Email: <ashlee@lincolnwellnessgroup.com>
 
-[Learn More](https://www.lincolnwellnessgroup.com/ashlee-reed/)
+[Visit their website](https://www.lincolnwellnessgroup.com/ashlee-reed/)
 
 ![picture](./markdown/resources/images/aReed.jpeg)
