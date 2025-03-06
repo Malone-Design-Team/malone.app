@@ -17,7 +17,7 @@ Lincoln, NE 68516
 
 [402.488.1363](tel:4024881363)
 
-[More information](markdown/modules/extra-resources/AseraCare-Hospice-Extra-Info.md)
+[More information](?tab=modules&module=extra-resources/AseraCare-Hospice-Extra-Info.md)
 
 [Visit their website](https://www.amedisys.com/)
 
