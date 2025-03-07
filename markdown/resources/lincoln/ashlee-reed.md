@@ -1,9 +1,8 @@
 # Ashlee Reed - Mental Health Professional
 
-Licensed mental health professional with the Lincoln Wellness Group serving telehealth patients at this time.
+Serving telehealth patients
 
-#### Contact/More Info
-
+Lincoln Wellness Group  
 [4344 N. 62nd Street](https://www.google.com/maps/place/4344+N+62nd+St,+Lincoln,+NE+68507/@40.8567156,-96.6394618,433m/data=!3m1!1e3!4m6!3m5!1s0x8796bb8e5de77fa1:0x56af0f2e8e4708a3!8m2!3d40.8566827!4d-96.6356607!16s%2Fg%2F11c27jgsm7?entry=ttu&g_ep=EgoyMDI1MDIyNC4wIKXMDSoASAFQAw%3D%3D)  
 Lincoln, NE 68507
 
