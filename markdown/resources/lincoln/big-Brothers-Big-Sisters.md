@@ -1,9 +1,8 @@
-# Big Brothers and Big Sisters of the Midlands
+# Big Brothers and Big Sisters of the Midlands - Child Resources
 
 Child Mentoring and Community-based Mentoring For School-age Children 
 
-6201 Havelock Avenue 
-
+6201 Havelock Avenue  
 Lincoln NE 68507
 
 [402.464.2227](tel:4024642227)
