@@ -6,6 +6,6 @@ Specialization in the treatment of trauma | Medicaid & out of network insurance.
 
 [402.327.1085](tel:4023271085)
 
-[Kelly & Associates](https://www.kellyandassociatestherapy.com/hallie-zimmerman)
+[Kelly & Associates Website](https://www.kellyandassociatestherapy.com/hallie-zimmerman)
 
 ![picture](./markdown/resources/images/hZimmerman.jpeg)
