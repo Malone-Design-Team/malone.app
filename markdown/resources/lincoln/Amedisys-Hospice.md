@@ -8,6 +8,6 @@ Health care, hospice care, palliative care, and high-acuity care
 
 [More information](?tab=modules&module=extra-resources/AseraCare-Hospice-Extra-Info.md)
 
-[Visit their website](https://www.amedisys.com/)
+[Amedisys Website](https://www.amedisys.com/)
 
 ![picture](./markdown/resources/images/aseraCareHospice.jpg)
