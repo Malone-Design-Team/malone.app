@@ -6,6 +6,6 @@ Perinatal Mental Health | Medicaid & BCBS only
 
 [531.249.2324](tel:5312492324)
 
-[Meadowlark Counseling](https://www.meadowlarkcounselingne.com/about)
+[Meadowlark Counseling Website](https://www.meadowlarkcounselingne.com/about)
 
 ![picture](./markdown/resources/images/jMayeux.jpeg)
