@@ -1,8 +1,6 @@
 # Assel Saparova - Mental Health Professional
 
-EMDR therapist providing telehealth services
-
-#### Contact/More Info
+EMDR therapist | Telehealth services
 
 Contact: [531.233.4903](tel:5312334903)
 
