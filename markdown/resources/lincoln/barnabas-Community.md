@@ -2,8 +2,7 @@
 
 Personal Goods, Hot Food, and Worship 
 
-931 Saunders Ave
-
+931 Saunders Ave  
 Lincoln NE 68521
 
 [402.742.0035](tel:4027420035)
