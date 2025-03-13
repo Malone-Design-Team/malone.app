@@ -6,6 +6,6 @@ In-person and telehealth services | Medicaid & Private Ins
 
 [402.412.5450](tel:4024125450)
 
-[Better Place Counseling](https://www.betterplacecounseling.org/)
+[Better Place Counseling Website](https://www.betterplacecounseling.org/)
 
 ![picture](./markdown/resources/images/cKalkwalf.jpeg)
