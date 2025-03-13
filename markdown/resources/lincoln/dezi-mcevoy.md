@@ -1,13 +1,7 @@
-# Dezi McEvoy
+# Dezi McEvoy - Mental Health Professional
 
-Medicaid & Private Ins
+Perinatal Mental Health | Options for insured and uninsured
 
-4344 N. 62nd St.
-
-Suite 5
-
-Lincoln NE 68507
-
-[Holistic Healing](https://holistichealing-counseling.com/)
+[Holistic Healing Couseling Website](https://holistichealing-counseling.com/)
 
 ![picture](./markdown/resources/images/dMcevoy.jpeg)
