@@ -1,4 +1,4 @@
-# Carey Kalkwalf - Mental Health Services
+# Carey Kalkwalf - Mental Health Professional
 
 In-person and telehealth services | Medicaid & Private Ins
 
