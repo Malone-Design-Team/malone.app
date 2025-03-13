@@ -1,6 +1,6 @@
 # Audrey Hines - Mental Health Professional
 
-Audrey is equipped to help moms navigate the emotional and physiological changes that are part of pregnancy and the post-partum period.
+Navigate the emotional and physiological changes of pregnancy and the post-partum period.
 
 Exclusively telehealth. Medicaid & Blue Cross Blue Shield only.
 
