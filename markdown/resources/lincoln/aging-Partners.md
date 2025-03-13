@@ -1,4 +1,4 @@
-# Aging Partners - Elderly Care
+# Aging Partners - Elderly Care Services
 
 Mission: Enhance daily living, expand personal choices, and educate the community to ensure the independence and full life of the people we serve.
 
