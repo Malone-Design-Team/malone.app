@@ -1,11 +1,6 @@
-# Assel Saparova
-# Mental Health Professional
+# Assel Saparova - Mental Health Professional
 
-Mission: At Presence Psychotherapy, LLC, together with the client, we will explore different strategies and techniques, and examine important relationships within family and social systems, that will help them see new possibilities and become the author of their own life.
-
-About: I am an EMDR therapist and help people to work through their trauma and painful memories. Also, I utilize different tools such as breathing, mindfulness, therapeutic writing. I speak English, Spanish and Russian and offer a culturally sensitive and accepting space for people from different ethnic, cultural, religious backgrounds and sexual orientation.
-
-Telehealth Only
+EMDR therapist providing telehealth services
 
 #### Contact/More Info
 
