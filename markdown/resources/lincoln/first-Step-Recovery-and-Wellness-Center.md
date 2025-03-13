@@ -6,8 +6,7 @@ Substance Abuse, Drug Addiction Counseling, Drug and Alcohol Rehab, Drug Detox, 
 
 [402.434.2730](tel:4024342730)
 
-[Find Out More](?tab=modules&module=extra-resources/First-Step-Recovery-and-Wellness-Center-Extra-Info.md)
-
+[Find Out More](?tab=modules&module=extra-resources/First-Step-Recovery-and-Wellness-Center-Extra-Info.md)  
 [First Step Website](https://rehabs.org/first-step-recovery-center-2/)
 
 ![picture](./markdown/resources/images/firstStep.jpg)
