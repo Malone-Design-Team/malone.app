@@ -1,4 +1,4 @@
-# Barnabas Community
+# Barnabas Community - Social Support
 
 Personal Goods, Hot Food, and Worship 
 
