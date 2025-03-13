@@ -1,6 +1,6 @@
 # Aging Partners - Elderly Care
 
-Mission: Aging Partners plans, coordinates, and advocates for older people in an eight-county area. Our mission is to enhance daily living, expand personal choices, and educate the community to ensure the independence and full life of the people we serve.
+Mission: Enhance daily living, expand personal choices, and educate the community to ensure the independence and full life of the people we serve.
 
 #### Contact/More Info
 
