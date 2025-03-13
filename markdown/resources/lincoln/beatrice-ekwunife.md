@@ -6,6 +6,6 @@ Medicaid and Private Ins
 
 [402.413.6677](tel:4024136677)
 
-[Youniq Health](https://youniqhealth.com/#beatrice)
+[Youniq Health Website](https://youniqhealth.com/#beatrice)
 
 ![picture](./markdown/resources/images/bEkwunife.jpeg)
