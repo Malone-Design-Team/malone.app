@@ -6,6 +6,6 @@ Medicaid & Private Ins
 
 [531.249.2324](tel:5312492324)
 
-[Sikhona Therapy](https://sikhonatherapyne.com/audrey-hines/)
+[Sikhona Therapy Website](https://sikhonatherapyne.com/audrey-hines/)
 
 ![picture](./markdown/resources/images/mTerry.jpeg)
