@@ -1,10 +1,10 @@
-# Michaela Mastny, Counselor, LICSW, LIMHP
+# Michaela Mastny - Mental Health Professional
 
-Location: Mental Wellness Counseling Omaha, NE 68105
+Mental Wellness Counseling  
+Specialty: Anxiety, depression, life transitions  
+Telehealth only
 
 [(531) 208-1432](tel:5312081432)
-
-Specialty: Anxiety, depression, life transitions
 
 Insurance: Blue Cross and Blue Shield, Medicaid
 
