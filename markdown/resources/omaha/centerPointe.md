@@ -1,4 +1,4 @@
-# CenterPointe
+# CenterPointe - Health Services
 
 Mental Health Care, Substance Abuse Programs, Residential Treatment, and Case Management 
 
