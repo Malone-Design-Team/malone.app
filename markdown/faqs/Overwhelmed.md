@@ -1,3 +1,7 @@
 ### Q: Is it normal to feel overwhelmed after childbirth? 
 
-A: Yes, many new mothers feel overwhelmed. It's a big life change that can bring many surprises and challenges. Not only do you have a new baby to take care of, but there are changes in your body, your routines, and your relationships as well. To say nothing of the financial burden. It's normal to feel overwhelmed by everything that comes along after giving birth to a child. Don't be afraid to ask for help from friends and family.
+A: Becoming a parent is one of life’s biggest transitions, and it often comes with more surprises and challenges than anyone expects.
+
+Suddenly, you’re caring for a new little life while also navigating changes in your own body, sleep patterns, daily routines, and even your relationships. The emotional, physical, and financial shifts can all feel like a lot—because they are.
+
+If you’re feeling overwhelmed, please know this: that feeling is valid, and it’s incredibly common. You are not failing. You’re adjusting to something completely new—and doing your best in a season that demands so much.
